@@ -1,5 +1,6 @@
-RUBIB (Rodri Universal multiBoot Installer B) www.darwintoledo.com
+RUBIB (Rodri Universal multiBoot Installer B) ©2016 Darwin Toledo http://rubib.darwintoledo.com
 
+-------------------------------------------------------------------------------------------------
 YUMI (Your Universal Multiboot Installer) ©2011-2016 Lance www.pendrivelinux.com
 This Open Source tool is covered under GNU General Public License Version 2
 Source Code is made available at time of download from the official YUMI page:
