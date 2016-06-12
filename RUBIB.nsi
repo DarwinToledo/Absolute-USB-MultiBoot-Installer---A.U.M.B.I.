@@ -140,7 +140,7 @@ Function SelectionsPage
  ${NSD_SetText} $DestDriveTxt "$DestDrive"
 
 ; To Install or Uninstall? That is the question!  
-  ${NSD_CreateCheckBox} 60% 0 44% 15 "View or Remove Installed Distros?"
+  ${NSD_CreateCheckBox} 60% 0 44% 15 "$(VIEW_ONREM_DISTROS)"
   Pop $Uninstaller
   ${NSD_OnClick} $Uninstaller Uninstall  
 
@@ -154,26 +154,26 @@ Function SelectionsPage
   ${NSD_CB_SelectString} $Distro $DistroName ; Was ${NSD_LB_SelectString} $Distro $DistroName  ; Enable For DropBox 
   
 ; Force Show All ISO Option
-  ${NSD_CreateCheckBox} 80% 100 20% 15 "Show All ISOs?"
+  ${NSD_CreateCheckBox} 80% 100 20% 15 "$(SHOW_ALL_ISOS)"
   Pop $ForceShowAll
   ${NSD_OnClick} $ForceShowAll ShowAllISOs   
 
 ; ISO Download Option
-  ${NSD_CreateCheckBox} 60% 60 40% 15 "Download the ISO (Optional)."
+  ${NSD_CreateCheckBox} 60% 60 40% 15 "$(DOWNLOAD_ISOOP)"
   Pop $DownloadISO
   ${NSD_OnClick} $DownloadISO DownloadIt  
   
 ; Clickable Link to Distribution Homepage  
-  ${NSD_CreateLink} 60% 80 40% 15 "Visit the $OfficialName HomePage"
+  ${NSD_CreateLink} 60% 80 40% 15 "$(RL_VISIST_OFHOME)"
   Pop $DistroLink
   ${NSD_OnClick} $DistroLink onClickLinuxSite    
 
 ; ISO Selection Starts  
   ${NSD_CreateLabel} 0 100 100% 15 $(IsoPage_Text)
   Pop $LabelISOSelection
-  ${NSD_CreateText} 0 120 78% 20 "Browse to and select the $FileFormat"
+  ${NSD_CreateText} 0 120 78% 20 "$(BROW_AND_SELFORM)"
   Pop $ISOFileTxt 
-  ${NSD_CreateBrowseButton} 85% 120 60 20 "Browse"
+  ${NSD_CreateBrowseButton} 85% 120 60 20 "$(RL_BROWSE)"
   Pop $ISOSelection 
   ${NSD_OnClick} $ISOSelection ISOBrowse   
   
@@ -200,7 +200,7 @@ Function SelectionsPage
 ; Drive Pre-Selection  
   ${NSD_CreateLabel} 0 0 58% 15 ""
   Pop $LabelDrivePage 
-  ${NSD_SetText} $LabelDrivePage "Step 1: ${NAME} Summoned $DestDisk as your USB Device"
+  ${NSD_SetText} $LabelDrivePage "$(RL1_STEP1)"
 ; Droplist for Drive Selection  
   ${NSD_CreateDropList} 0 20 28% 15 "" ; was 0 20 15% 15
   Pop $DestDriveTxt 
@@ -224,7 +224,7 @@ Function SelectionsPage
   ${NSD_OnChange} $DestDriveTxt OnSelectDrive 
   
 ; All Drives Option
-  ${NSD_CreateCheckBox} 30% 23 30% 15 "Show All Drives?" ; was 17% 23 41% 15
+  ${NSD_CreateCheckBox} 30% 23 30% 15 "$(SHOW_ALL_DRIVES)" ; was 17% 23 41% 15
   Pop $AllDriveOption
   ${NSD_OnClick} $AllDriveOption ListAllDrives   
   
@@ -234,7 +234,7 @@ Function SelectionsPage
   ${NSD_OnClick} $Format FormatIt     
  
 ; Add Help Link
-  ${NSD_CreateLink} 0 215 65% 15 "Click HERE to visit the ${NAME} page for additional Help!"
+  ${NSD_CreateLink} 0 215 65% 15 "$(CLICK_TO_ONLINEHELP)"
   Pop $Link
   ${NSD_OnClick} $LINK onClickMyLink 
  
@@ -263,7 +263,7 @@ Function SelectionsPage
 ; Drive Selection Starts  
   ${NSD_CreateLabel} 0 0 58% 15 ""    
   Pop $LabelDrivePage
-  ${NSD_SetText} $LabelDrivePage "Step 1: Select the Drive Letter of your USB Device."    
+  ${NSD_SetText} $LabelDrivePage "$(RL2_STEP1)"
   
 ; Droplist for Drive Selection
   ${NSD_CreateDropList} 0 20 28% 15 "" ; was 0 20 15% 15
@@ -272,12 +272,12 @@ Function SelectionsPage
   ${NSD_OnChange} $DestDriveTxt OnSelectDrive
  
 ; All Drives Option
-  ${NSD_CreateCheckBox} 30% 23 30% 15 "Show All Drives?" ; was 17% 23 41% 15
+  ${NSD_CreateCheckBox} 30% 23 30% 15 "$(SHOW_ALL_DRIVES2)" ; was 17% 23 41% 15
   Pop $AllDriveOption
   ${NSD_OnClick} $AllDriveOption ListAllDrives 
   
 ; Format Drive Option
-  ${NSD_CreateCheckBox} 60% 23 100% 15 "Format $DestDisk Drive (Erase Content)?"
+  ${NSD_CreateCheckBox} 60% 23 100% 15 "$(RL2_FORMAT)"
   Pop $Format
   ${NSD_OnClick} $Format FormatIt    
  
@@ -291,26 +291,26 @@ Function SelectionsPage
   ${NSD_CB_SelectString} $Distro $DistroName ; Was ${NSD_LB_SelectString} $Distro $DistroName  ; Enable For DropBox
   
 ; Force Show All ISO Option
-  ${NSD_CreateCheckBox} 80% 100 20% 15 "Show All ISOs?"
+  ${NSD_CreateCheckBox} 80% 100 20% 15 "$(SHOW_ALL_ISOS2)"
   Pop $ForceShowAll
   ${NSD_OnClick} $ForceShowAll ShowAllISOs    
 
 ; ISO Download Option
-  ${NSD_CreateCheckBox} 60% 60 40% 15 "Download the ISO (Optional)."
+  ${NSD_CreateCheckBox} 60% 60 40% 15 "$(DOWNLOAD_ISOOP2)"
   Pop $DownloadISO
   ${NSD_OnClick} $DownloadISO DownloadIt  
   
 ; Clickable Link to Distribution Homepage  
-  ${NSD_CreateLink} 60% 80 40% 15 "Visit the $OfficialName HomePage"
+  ${NSD_CreateLink} 60% 80 40% 15 "$(RL_VISIST_OFHOME2)"
   Pop $DistroLink
   ${NSD_OnClick} $DistroLink onClickLinuxSite    
 
 ; ISO Selection Starts  
   ${NSD_CreateLabel} 0 100 100% 15 $(IsoPage_Text)
   Pop $LabelISOSelection
-  ${NSD_CreateText} 0 120 78% 20 "Browse to and select the $FileFormat"
+  ${NSD_CreateText} 0 120 78% 20 "$(BROW_AND_SELFORM2)"
   Pop $ISOFileTxt 
-  ${NSD_CreateBrowseButton} 85% 120 60 20 "Browse"
+  ${NSD_CreateBrowseButton} 85% 120 60 20 "$(RL_BROWSE2)"
   Pop $ISOSelection 
   ${NSD_OnClick} $ISOSelection ISOBrowse
 
@@ -335,7 +335,7 @@ Function SelectionsPage
   ${NSD_OnNotify} $CasperSlider onNotify_CasperSlider    
   
 ; Add Help Link
-  ${NSD_CreateLink} 0 215 65% 15 "Click HERE to visit the ${NAME} page for additional Help!"
+  ${NSD_CreateLink} 0 215 65% 15 "$(CLICK_TO_ONLINEHELP2)"
   Pop $Link
   ${NSD_OnClick} $LINK onClickMyLink  
 
@@ -387,12 +387,12 @@ Function ListAllDrives ; Set to Display All Drives
   ${NSD_GetState} $AllDriveOption $DisplayAll
   ${If} $DisplayAll == ${BST_CHECKED}
   ${NSD_Check} $AllDriveOption
-  ${NSD_SetText} $AllDriveOption "Showing All Drives" 
+  ${NSD_SetText} $AllDriveOption "$(RL2_SHOWING)"
     StrCpy $ShowAll "YES"
     ${GetDrives} "ALL" DrivesList ; All Drives Listed  
   ${ElseIf} $DisplayAll == ${BST_UNCHECKED}
   ${NSD_Uncheck} $AllDriveOption
-  ${NSD_SetText} $AllDriveOption "Show All Drives?"  
+  ${NSD_SetText} $AllDriveOption "$(RL2_SHOWALL)"
 	${GetDrives} "FDD" DrivesList ; FDD+HDD reduced to FDD for removable media only
 	StrCpy $ShowAll "NO"
   ${EndIf}
@@ -412,11 +412,11 @@ Function DownloadIt ; Set Download Option
   ${NSD_GetState} $DownloadISO $DownloadMe
   ${If} $DownloadMe == ${BST_CHECKED}
   ${NSD_Check} $DownloadISO
-  ${NSD_SetText} $DownloadISO "Opened Download Link"
+  ${NSD_SetText} $DownloadISO "$(RL_ODL)"
   Call DownloadLinks
   ${ElseIf} $DownloadMe == ${BST_UNCHECKED}
   ${NSD_Uncheck} $DownloadISO 
-  ${NSD_SetText} $DownloadISO "Download Link" 
+  ${NSD_SetText} $DownloadISO "$(RL_DL1)"
   ${EndIf}  
 FunctionEnd
 
