@@ -18,177 +18,118 @@
 #===========================================================
 
          !addincludedir "Resources\Scripts"
+         !AddPluginDir  "plugins"
 
-         !include       "Defines.nsh"
+         RequestExecutionLevel admin ;highest
+         SetCompressor /SOLID /FINAL LZMA
+         CRCCheck On
+         XPStyle on
+         
+         !include       WordFunc.nsh
+         !include       nsDialogs.nsh
+         !include       MUI2.nsh
+         !include       FileFunc.nsh
+         !include       LogicLib.nsh
+         ;!include      TextFunc.nsh
 
-; MoreInfo Plugin - Adds Version Tab fields to Properties. Plugin created by onad http://nsis.sourceforge.net/MoreInfo_plug-in
-VIProductVersion "${VERSION}"
-VIAddVersionKey CompanyName "pendrivelinux.com"
-VIAddVersionKey LegalCopyright "Copyright ©2016 Lance Pendrivelinux.com"
-VIAddVersionKey FileVersion "${VERSION}"
-VIAddVersionKey FileDescription "Automated Universal MultiBoot UFD Creation Tool"
-VIAddVersionKey License "GPL Version 2"
-
-Name "${NAME} ${VERSION}"
-OutFile "${FILENAME}-${VERSION}.exe"
-RequestExecutionLevel admin ;highest
-SetCompressor LZMA
-CRCCheck On
-XPStyle on
-ShowInstDetails show
-BrandingText "${NAME} ${VERSION}"
-CompletedText "All Finished, Process is Complete!"
-InstallButtonText "Create"
-
-!include WordFunc.nsh
-!include nsDialogs.nsh
-!include MUI2.nsh
-!include FileFunc.nsh
-!include LogicLib.nsh
-;!include TextFunc.nsh
-!AddPluginDir "plugins"
-
-; Variables
-Var Capacity
-Var VolName
-Var Checker
-Var FileFormat
-Var Format 
-Var FormatMe
-Var BlockSize
-Var Dialog
-Var LabelDrivePage
-Var Distro
-Var DistroName
-Var ISOFileName
-Var DestDriveTxt
-Var JustDrive
-Var DestDrive
-Var BootDir
-Var LinuxDistroSelection
-Var LabelISOSelection
-Var ISOFileTxt
-Var TheISO
-Var IsoFile
-Var ISOSelection
-Var ISOTest
-Var JustISO
-Var JustISOName
-Var JustISOPath
-Var ConfigFile
-Var ConfigPath
-Var CopyPath
-Var SearchDir
-Var SearchFile
-Var DestDisk
-Var DownloadISO
-Var DownloadMe
-Var Link
-Var Links
-Var Auth
-Var DownLink
-Var LocalSelection
-Var Letters
-Var Config2Use
-Var SomeFileExt
-Var AllDriveOption
-Var DisplayAll
-Var DistroLink
-Var Homepage
-Var OfficialSite
-Var OfficialName
-Var NameThatISO
-Var OnlyVal
-Var Uninstaller
-Var Removal
-Var InUnStall
-Var SUSEDIR
-Var RepeatInstall
-Var ShowAll
-Var ForceShowAll
-Var ShowingAll
-
-Var SizeOfCasper 
-Var Casper
-Var CasperSlider
-Var CasperSelection
-Var SlideSpot
-Var RemainingSpace
-Var MaxPersist
-Var Persistence
+         !include       "Resources\Scripts\Defines.nsh"
+         !include       "Variables.nsh"
 
 !include DiskVoodoo.nsh ; DiskVoodoo Script created by Lance http://www.pendrivelinux.com
 
-; Interface settings
-!define MUI_FINISHPAGE_NOAUTOCLOSE
-!define MUI_HEADERIMAGE
-!define MUI_HEADERIMAGE_BITMAP "usb-logo-nsis.bmp" 
-!define MUI_HEADERIMAGE_BITMAP_NOSTRETCH
-!define MUI_HEADERIMAGE_RIGHT
+#===========================================================
+# MoreInfo Plugin - Adds Version Tab fields to Properties. Plugin created by onad http://nsis.sourceforge.net/MoreInfo_plug-in
+#===========================================================
 
-; License Agreement Page
-!define MUI_TEXT_LICENSE_SUBTITLE $(License_Subtitle)
-!define MUI_LICENSEPAGE_TEXT_TOP $(License_Text_Top)
-!define MUI_LICENSEPAGE_TEXT_BOTTOM $(License_Text_Bottom)
-!define MUI_PAGE_CUSTOMFUNCTION_PRE License_PreFunction
-!insertmacro MUI_PAGE_LICENSE "YUMI-Copying.txt"
+         VIProductVersion "${VERSION}"
+         VIAddVersionKey CompanyName "www.darwintoledo.com"
+         VIAddVersionKey LegalCopyright "Copyleft ©2016 Darwin Toledo www.darwintoledo.com"
+         VIAddVersionKey FileVersion "${VERSION}"
+         VIAddVersionKey FileDescription "Automated Universal MultiBoot UFD Creation Tool"
+         VIAddVersionKey License "GPL Version 2"
 
-; Distro Selection Page
-Page custom SelectionsPage
+#===========================================================
+# 
+#===========================================================
 
-; Install Files Page
-!define MUI_INSTFILESPAGE_COLORS "00FF00 000000" ;Green and Black
-!define MUI_INSTFILESPAGE_FINISHHEADER_TEXT $(Finish_Install)
-!define MUI_TEXT_INSTALLING_TITLE $(Install_Title)
-!define MUI_TEXT_INSTALLING_SUBTITLE $(Install_SubTitle)
-!define MUI_TEXT_FINISH_SUBTITLE $(Install_Finish_Sucess)
-!define MUI_PAGE_CUSTOMFUNCTION_PRE InstFiles_PreFunction
-!insertmacro MUI_PAGE_INSTFILES
+         !ifdef BUILD_ALPHA
+         Name "${NAME} ${VERSION}"
+         OutFile "Release\${FILENAME}-Alpha-${VERSION}.exe"
+         !endif
+         !ifdef BUILD_BETA
+         Name "${NAME} ${VERSION}"
+         OutFile "Release\${FILENAME}-Beta-${VERSION}.exe"
+         !endif
+         !ifdef BUILD_STABLE
+         Name "${NAME} ${VERSION}"
+         OutFile "Release\${FILENAME}-${VERSION}.exe"
+         !endif
 
-; Finish page
-!define MUI_FINISHPAGE_TITLE $(Finish_Title)
-!define MUI_FINISHPAGE_TEXT $(Finish_Text)
-!define MUI_FINISHPAGE_LINK $(Finish_Link)
-!define MUI_FINISHPAGE_LINK_LOCATION "http://www.pendrivelinux.com/boot-multiple-iso-from-usb-multiboot-usb/"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "finish.bmp"
-!define MUI_PAGE_CUSTOMFUNCTION_PRE Finish_PreFunction
-!insertmacro MUI_PAGE_FINISH
+         ShowInstDetails show
+         BrandingText "${NAME} ${VERSION}"
+         CompletedText "All Finished, Process is Complete!"
+         InstallButtonText "Create"
 
-; English Language files
-!insertmacro MUI_LANGUAGE "English" ; first language is the default language
-LangString License_Subtitle ${LANG_ENGLISH} "Please review the license terms before proceeding"
-LangString License_Text_Top ${LANG_ENGLISH} "The software within this program falls under the following Licenses."
-LangString License_Text_Bottom ${LANG_ENGLISH} "You must accept the terms of this License agreement to run this ${NAME}. If you agree, Click I Agree to Continue."
-LangString SelectDist_Title ${LANG_ENGLISH} "Drive Selection and Distro Options Page"
-LangString SelectDist_Subtitle ${LANG_ENGLISH} "Choose your Flash Drive, and a Distro, ISO/ZIP file.$\r$\nAdditional Distributions can be added each time this tool is run."
-LangString DrivePage_Text ${LANG_ENGLISH} "Step 1: Select the drive letter of your USB device."
-LangString Distro_Text ${LANG_ENGLISH} "Step 2: Select a Distribution from the list to put on your USB."
-LangString IsoPage_Text ${LANG_ENGLISH} "Step 3: Select the $FileFormat (Name must be the same as above)."
-LangString IsoPage_Title ${LANG_ENGLISH} "Select Your $FileFormat"
-LangString Casper_Text ${LANG_ENGLISH} "Step 4: Set a Persistent file size for storing changes (Optional)."
-LangString IsoFile ${LANG_ENGLISH} "$FileFormat file|$ISOFileName" ;$ISOFileName variable previously *.iso
-LangString Extract ${LANG_ENGLISH} "Extracting the $FileFormat: The progress bar will not move until finished. Please be patient..."
-LangString CreateSysConfig ${LANG_ENGLISH} "Creating configuration files for $DestDisk"
-LangString ExecuteSyslinux ${LANG_ENGLISH} "Executing syslinux on $BootDir"
-LangString SkipSyslinux ${LANG_ENGLISH} "Good Syslinux Exists..."
-LangString WarningSyslinux ${LANG_ENGLISH} "An error ($R8) occurred while executing syslinux.$\r$\nYour USB drive won't be bootable..."
-LangString WarningSyslinuxOLD ${LANG_ENGLISH} "This YUMI revision uses a newer Syslinux version that is not compatible with earlier revisions.$\r$\nPlease ensure your USB drive doesn't contain earlier revision installs."
-LangString Install_Title ${LANG_ENGLISH} "$InUnStall $ISOFileName"
-LangString Install_SubTitle ${LANG_ENGLISH} "Please wait while we $InUnStall $DistroName on $JustDrive"
-LangString Install_Finish_Sucess ${LANG_ENGLISH} "${NAME} sucessfully $InUnStalled $DistroName on $JustDrive"
-LangString Finish_Install ${LANG_ENGLISH} "$InUnStallation is Complete."
-LangString Finish_Title ${LANG_ENGLISH} "${NAME} has completed the $InUnStallation."
-LangString Finish_Text ${LANG_ENGLISH} "Your Selections have been $InUnStalled on your USB drive.$\r$\n$\r$\nFeel Free to run this tool again to $InUnStall more Distros.$\r$\n$\r$\nYUMI will keep track of selections you have already $InUnStalled."
-LangString Finish_Link ${LANG_ENGLISH} "Visit the YUMI Tutorial Page"
+#===========================================================
+#
+#===========================================================
+         ; Interface settings
+         !define MUI_FINISHPAGE_NOAUTOCLOSE
+         !define MUI_HEADERIMAGE
+         !define MUI_HEADERIMAGE_BITMAP "usb-logo-nsis.bmp"
+         !define MUI_HEADERIMAGE_BITMAP_NOSTRETCH
+         !define MUI_HEADERIMAGE_RIGHT
 
-!include FileManipulation.nsh ; Text File Manipulation
-!include FileNames.nsh ; Macro for FileNames
-!include DistroList.nsh ; List of Distributions
-!include "CasperScript.nsh" ; For creation of Persistent Casper-rw files
+         ; License Agreement Page
+         !define MUI_TEXT_LICENSE_SUBTITLE $(License_Subtitle)
+         !define MUI_LICENSEPAGE_TEXT_TOP $(License_Text_Top)
+         !define MUI_LICENSEPAGE_TEXT_BOTTOM $(License_Text_Bottom)
+         !define MUI_PAGE_CUSTOMFUNCTION_PRE License_PreFunction
+         !insertmacro MUI_PAGE_LICENSE "GNU GPL.txt"
 
-Function License_PreFunction
-  StrCpy $R8 1 ;This is the 1st page
-FunctionEnd
+         ; Distro Selection Page
+         Page custom SelectionsPage
+
+         ; Install Files Page
+         !define MUI_INSTFILESPAGE_COLORS "00FF00 000000" ;Green and Black
+         !define MUI_INSTFILESPAGE_FINISHHEADER_TEXT $(Finish_Install)
+         !define MUI_TEXT_INSTALLING_TITLE $(Install_Title)
+         !define MUI_TEXT_INSTALLING_SUBTITLE $(Install_SubTitle)
+         !define MUI_TEXT_FINISH_SUBTITLE $(Install_Finish_Sucess)
+         !define MUI_PAGE_CUSTOMFUNCTION_PRE InstFiles_PreFunction
+         !insertmacro MUI_PAGE_INSTFILES
+
+         ; Finish page
+         !define MUI_FINISHPAGE_TITLE $(Finish_Title)
+         !define MUI_FINISHPAGE_TEXT $(Finish_Text)
+         !define MUI_FINISHPAGE_LINK $(Finish_Link)
+         !define MUI_FINISHPAGE_LINK_LOCATION "http://www.pendrivelinux.com/boot-multiple-iso-from-usb-multiboot-usb/"
+         !define MUI_WELCOMEFINISHPAGE_BITMAP "finish.bmp"
+         !define MUI_PAGE_CUSTOMFUNCTION_PRE Finish_PreFunction
+         !insertmacro MUI_PAGE_FINISH
+
+         ; English Language files
+         !insertmacro MUI_LANGUAGE "English" ; first language is the default language
+         !include     "Language_English.nsh"
+         !insertmacro MUI_LANGUAGE "SpanishInternational" ; first language is the default language
+         !include     "Language_SpanishInternational.nsh"
+
+         !include FileManipulation.nsh ; Text File Manipulation
+         !include FileNames.nsh ; Macro for FileNames
+         !include DistroList.nsh ; List of Distributions
+         !include "CasperScript.nsh" ; For creation of Persistent Casper-rw files
+
+#===========================================================
+#
+#===========================================================
+
+         Function License_PreFunction
+             StrCpy $R8 1 ;This is the 1st page
+         FunctionEnd
+
+#===========================================================
+#
+#===========================================================
 
 Function SelectionsPage
   StrCpy $R8 2
@@ -1301,8 +1242,8 @@ StrCpy $R9 0 ; we start on page 0
   File /oname=$PLUGINSDIR\7zG.exe "7zG.exe"
   File /oname=$PLUGINSDIR\7z.dll "7z.dll"  
   File /oname=$PLUGINSDIR\Rubib.png "Rubib.png"
-  File /oname=$PLUGINSDIR\YUMI-Copying.txt "YUMI-Copying.txt" 
-  File /oname=$PLUGINSDIR\YUMI-Readme.txt "YUMI-Readme.txt" 
+  File /oname=$PLUGINSDIR\RUBIB-Copying.txt "RUBIB-Copying.txt"
+  File /oname=$PLUGINSDIR\README.txt "README.txt"
   File /oname=$PLUGINSDIR\license.txt "license.txt"   
   File /oname=$PLUGINSDIR\vesamenu.c32 "vesamenu.c32" 
   File /oname=$PLUGINSDIR\menu.c32 "menu.c32"    

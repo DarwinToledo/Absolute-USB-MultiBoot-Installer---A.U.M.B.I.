@@ -2,7 +2,7 @@
 www.darwintoledo.com
 
 =========================================================================
-RUBIB (Rodri Universal Boot Installer B)
+RUBIB (Rodri Universal multiBoot Installer B)
 =========================================================================
 * New Project Based on YUMI (Your Universal Multiboot Installer)
 
