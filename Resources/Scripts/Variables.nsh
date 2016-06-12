@@ -69,3 +69,6 @@
      Var RemainingSpace
      Var MaxPersist
      Var Persistence
+     
+     
+     Var DefaultLNG

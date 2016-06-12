@@ -4,6 +4,11 @@
 #===========================================================
 
 
+       !macro FILEONAME0 FILE
+              File /oname=$PLUGINSDIR\${FILE} "menufiles\${FILE}"
+       !macroend
+       !define FILEONAME0 "!insertmacro FILEONAME0 "
+
        !macro FILEONAME FILE
               File /oname=$PLUGINSDIR\${FILE} "${FILE}"
        !macroend
@@ -13,3 +18,15 @@
               File /oname=$PLUGINSDIR\${FILE} "menu\${FILE}"
        !macroend
        !define FILEONAME2 "!insertmacro FILEONAME2 "
+
+       !macro FILEONAMELANG FILE
+ 	${If} $LANGUAGE == ${LANG_ENGLISH}
+		StrCpy $DefaultLNG "EnglishFiles"
+              File /oname=$PLUGINSDIR\${FILE} "menufiles\English_${FILE}"
+        ${ElseIf} $LANGUAGE == ${LANG_SPANISHINTERNATIONAL}
+		StrCpy $DefaultLNG "SpanishInternationalFiles"
+              File /oname=$PLUGINSDIR\${FILE} "menufiles\SpanishInternational_${FILE}"
+        ${Endif}
+
+       !macroend
+       !define FILEONAMELANG "!insertmacro FILEONAMELANG "

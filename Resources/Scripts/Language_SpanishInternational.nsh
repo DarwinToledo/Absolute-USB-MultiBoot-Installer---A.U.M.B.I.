@@ -6,16 +6,16 @@
 !define RODRILANG ${LANG_SPANISHINTERNATIONAL}
 
 
-        LangString License_Subtitle         ${RODRILANG} "Please review the license terms before proceeding"
-        LangString License_Text_Top         ${RODRILANG} "The software within this program falls under the following Licenses."
-        LangString License_Text_Bottom      ${RODRILANG} "You must accept the terms of this License agreement to run this ${NAME}. If you agree, Click I Agree to Continue."
-        LangString SelectDist_Title         ${RODRILANG} "Drive Selection and Distro Options Page"
-        LangString SelectDist_Subtitle      ${RODRILANG} "Choose your Flash Drive, and a Distro, ISO/ZIP file.$\r$\nAdditional Distributions can be added each time this tool is run."
-        LangString DrivePage_Text           ${RODRILANG} "Step 1: Select the drive letter of your USB device."
-        LangString Distro_Text              ${RODRILANG} "Step 2: Select a Distribution from the list to put on your USB."
-        LangString IsoPage_Text             ${RODRILANG} "Step 3: Select the $FileFormat (Name must be the same as above)."
-        LangString IsoPage_Title            ${RODRILANG} "Select Your $FileFormat"
-        LangString Casper_Text              ${RODRILANG} "Step 4: Set a Persistent file size for storing changes (Optional)."
+        LangString License_Subtitle         ${RODRILANG} "Por favor, revise los términos de la licencia antes de continuar"
+        LangString License_Text_Top         ${RODRILANG} "El software dentro de este programa se dividen en las siguientes licencias."
+        LangString License_Text_Bottom      ${RODRILANG} "Debe aceptar los términos de este acuerdo de licencia para ejecutar ${NAME}. Si está de acuerdo, haga clic en Acepto para continuar."
+        LangString SelectDist_Title         ${RODRILANG} "Seleccion de unidad y opciones de Distro."
+        LangString SelectDist_Subtitle      ${RODRILANG} "Elija una unidad USB, y una Distribución, archivo ISO/ZIP.$\r$\nSe pueden añadir distribuciones adicionales cada vez que se ejecuta la herramienta."
+        LangString DrivePage_Text           ${RODRILANG} "Paso 1: Seleccione la letra de su dispositivo USB."
+        LangString Distro_Text              ${RODRILANG} "Paso 2: Seleccione una distribución de la lista."
+        LangString IsoPage_Text             ${RODRILANG} "Paso 3: Seleccionar $FileFormat (el nombre debe ser similar al anterior)."
+        LangString IsoPage_Title            ${RODRILANG} "Seleccione su $FileFormat"
+        LangString Casper_Text              ${RODRILANG} "Paso 4: Establecer tamaño de archivo persistente para cambios almacenamiento (opcional)."
         LangString IsoFile                  ${RODRILANG} "$FileFormat file|$ISOFileName" ;$ISOFileName variable previously *.iso
         LangString Extract                  ${RODRILANG} "Extracting the $FileFormat: The progress bar will not move until finished. Please be patient..."
         LangString CreateSysConfig          ${RODRILANG} "Creating configuration files for $DestDisk"
@@ -42,7 +42,7 @@
         LangString SHOW_ALL_DRIVES          ${RODRILANG} "Show All Drives?"
         LangString CLICK_TO_ONLINEHELP      ${RODRILANG} "Click HERE to visit the ${NAME} page for additional Help!"
 
-        LangString RL2_STEP1                ${RODRILANG} "Step 1: Select the Drive Letter of your USB Device."
+        LangString RL2_STEP1                ${RODRILANG} "Paso 1: Seleccione la letra de la unidad USB."
         LangString SHOW_ALL_DRIVES2         ${RODRILANG} "Show All Drives?"
         LangString RL2_FORMAT               ${RODRILANG} "Format $DestDisk Drive (Erase Content)?"
         LangString SHOW_ALL_ISOS2           ${RODRILANG} "Show All ISOs?"

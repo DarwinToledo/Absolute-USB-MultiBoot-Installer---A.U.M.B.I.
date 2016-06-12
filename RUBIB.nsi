@@ -1221,26 +1221,24 @@ StrCpy $R9 0 ; we start on page 0
  SetShellVarContext all
  InitPluginsDir
 
-  ${FILEONAME} syslinux.exe
-  ${FILEONAME} syslinux.cfg
-  ${FILEONAME} menu.lst
-  ${FILEONAME} yumi.xpm.gz
-  ${FILEONAME} grub.exe
-  ${FILEONAME} 7zG.exe
-  ${FILEONAME} 7z.dll
-  ${FILEONAME} Rubib.png
-  ${FILEONAME} RUBIB-Copying.txt
-  ${FILEONAME} README.txt
-  ${FILEONAME} license.txt
-  ${FILEONAME} vesamenu.c32
-  ${FILEONAME} menu.c32
-  ${FILEONAME} memdisk
-  ${FILEONAME} chain.c32
-  ${FILEONAME} libcom32.c32
-  ${FILEONAME} libutil.c32
-  ${FILEONAME} ifcpu64.c32
-  ${FILEONAME} liveusb
-  
+  ${FILEONAMELANG} syslinux.cfg
+
+  ${FILEONAME0} syslinux.exe
+  ${FILEONAME0} menu.lst
+  ${FILEONAME0} yumi.xpm.gz
+  ${FILEONAME0} grub.exe
+  ${FILEONAME0} 7zG.exe
+  ${FILEONAME0} 7z.dll
+
+  ${FILEONAME0} vesamenu.c32
+  ${FILEONAME0} menu.c32
+  ${FILEONAME0} memdisk
+  ${FILEONAME0} chain.c32
+  ${FILEONAME0} libcom32.c32
+  ${FILEONAME0} libutil.c32
+  ${FILEONAME0} ifcpu64.c32
+  ${FILEONAME0} liveusb
+
   ${FILEONAME2} info
   ${FILEONAME2} antivirus.cfg
   ${FILEONAME2} system.cfg
@@ -1248,6 +1246,12 @@ StrCpy $R9 0 ; we start on page 0
   ${FILEONAME2} linux.cfg
   ${FILEONAME2} other.cfg
   ${FILEONAME2} unlisted.cfg
+
+  ${FILEONAME} Rubib.png
+  ${FILEONAME} RUBIB-Copying.txt
+  ${FILEONAME} README.txt
+  ${FILEONAME} license.txt
+
 FunctionEnd
 
 Function onNotify_CasperSlider

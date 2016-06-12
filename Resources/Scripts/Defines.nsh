@@ -6,7 +6,7 @@
 
            !define NAME                "RUBIB"
            !define FILENAME            "RUBIB"
-           !define VERSION             "1.0.0.${BUILD_NUMBER}"
+           !define VERSION             "1.5.0.${BUILD_NUMBER}"
 
            #INST RESOURCES
            !define MUI_ICON            "${NSISDIR}\Contrib\Graphics\Icons\box-install.ico"

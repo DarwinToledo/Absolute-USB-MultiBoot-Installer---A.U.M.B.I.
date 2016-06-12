@@ -1,0 +1,10 @@
+* RUBIB v1.0.1.*
+- New: Multilanguage support
+- Fixed: Licences from Yumi
+
+
+* RUBIB v1.0.0.88
+
+- initial release
+- Ubuntu, and debian links updated
+- Various changes in the source code
