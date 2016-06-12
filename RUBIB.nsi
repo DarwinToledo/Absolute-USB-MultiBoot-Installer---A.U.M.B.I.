@@ -42,7 +42,7 @@
 #===========================================================
 
          VIProductVersion "${VERSION}"
-         VIAddVersionKey CompanyName "www.darwintoledo.com"
+         VIAddVersionKey CompanyName "${RUBIB_WEBSITE}"
          VIAddVersionKey LegalCopyright "Copyleft ©2016 Darwin Toledo www.darwintoledo.com"
          VIAddVersionKey FileVersion "${VERSION}"
          VIAddVersionKey FileDescription "Automated Universal MultiBoot UFD Creation Tool"
@@ -103,7 +103,7 @@
          !define MUI_FINISHPAGE_TITLE $(Finish_Title)
          !define MUI_FINISHPAGE_TEXT $(Finish_Text)
          !define MUI_FINISHPAGE_LINK $(Finish_Link)
-         !define MUI_FINISHPAGE_LINK_LOCATION "http://www.pendrivelinux.com/boot-multiple-iso-from-usb-multiboot-usb/"
+         !define MUI_FINISHPAGE_LINK_LOCATION "${RUBIB_LINK2}"
          !define MUI_WELCOMEFINISHPAGE_BITMAP "Resources\Images\finish.bmp"
          !define MUI_PAGE_CUSTOMFUNCTION_PRE Finish_PreFunction
          !insertmacro MUI_PAGE_FINISH
@@ -201,7 +201,7 @@ Function SelectionsPage
 ; Drive Pre-Selection  
   ${NSD_CreateLabel} 0 0 58% 15 ""
   Pop $LabelDrivePage 
-  ${NSD_SetText} $LabelDrivePage "Step 1: YUMI Summoned $DestDisk as your USB Device"  
+  ${NSD_SetText} $LabelDrivePage "Step 1: ${NAME} Summoned $DestDisk as your USB Device"
 ; Droplist for Drive Selection  
   ${NSD_CreateDropList} 0 20 28% 15 "" ; was 0 20 15% 15
   Pop $DestDriveTxt 
@@ -235,7 +235,7 @@ Function SelectionsPage
   ${NSD_OnClick} $Format FormatIt     
  
 ; Add Help Link
-  ${NSD_CreateLink} 0 215 65% 15 "Click HERE to visit the YUMI page for additional Help!"
+  ${NSD_CreateLink} 0 215 65% 15 "Click HERE to visit the ${NAME} page for additional Help!"
   Pop $Link
   ${NSD_OnClick} $LINK onClickMyLink 
  
@@ -336,7 +336,7 @@ Function SelectionsPage
   ${NSD_OnNotify} $CasperSlider onNotify_CasperSlider    
   
 ; Add Help Link
-  ${NSD_CreateLink} 0 215 65% 15 "Click HERE to visit the YUMI page for additional Help!"
+  ${NSD_CreateLink} 0 215 65% 15 "Click HERE to visit the ${NAME} page for additional Help!"
   Pop $Link
   ${NSD_OnClick} $LINK onClickMyLink  
 
@@ -405,7 +405,7 @@ FunctionEnd
 
 Function onClickMyLink
   Pop $Links ; pop something to prevent corruption
-  ExecShell "open" "http://www.pendrivelinux.com/yumi-multiboot-usb-creator/"
+  ExecShell "open" "${RUBIB_WEBSITE}"
 FunctionEnd
 
 Function onClickLinuxSite
@@ -766,7 +766,7 @@ Function OnSelectDrive
   
 ;  ${If} ${FileExists} $BootDir\menu.lst
 ;  ${AndIf} ${FileExists} $BootDir\syslinux.cfg
-;  MessageBox MB_ICONQUESTION|MB_OK "It appears MultibootISOs was previously used on this drive? To use YUMI on this device, you must format the drive."
+;  MessageBox MB_ICONQUESTION|MB_OK "It appears MultibootISOs was previously used on this drive? To use ${NAME} on this device, you must format the drive."
 ;  ${EndIf}
 FunctionEnd
 
@@ -919,7 +919,7 @@ Function HaveSpace ; Check space required
   System::Int64Op $1 > $SizeOfCasper ; Compare the space available > space required
   Pop $3 ; Get the result ...
   IntCmp $3 1 okay ; ... and compare it
-  MessageBox MB_ICONSTOP|MB_OK "Not enough free space remains. Closing YUMI!"
+  MessageBox MB_ICONSTOP|MB_OK "Not enough free space remains. Closing ${NAME}!"
   quit ; Close the program if the disk space was too small...
   okay: ; Proceed to execute...
   ;MessageBox MB_OK "ISO + Persistence will use $SizeOfCasper MB of the $1 MB Free disk space on $JustDrive Drive."  
@@ -1068,9 +1068,9 @@ Function DoSyslinux ; Install Syslinux on USB
   CopyFiles "$PLUGINSDIR\memdisk" "$BootDir\multiboot\menu\memdisk"   
   ${EndIf}    
 
-; Check to ensure menu.c32 exists... now required for YUMI V2
+; Check to ensure menu.c32 exists... now required for ${NAME} V2
   ${IfNot} ${FileExists} $BootDir\multiboot\menu.c32
-   DetailPrint "Adding menu.c32. Required for YUMI V2"
+   DetailPrint "Adding menu.c32. Required for ${NAME}"
    CopyFiles "$PLUGINSDIR\menu.c32" "$BootDir\multiboot\menu.c32" 
   ${EndIf}	  
 FunctionEnd
