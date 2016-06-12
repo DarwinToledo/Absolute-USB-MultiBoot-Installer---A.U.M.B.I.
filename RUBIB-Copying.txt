@@ -1,0 +1,41 @@
+RUBIB (Rodri Universal multiBoot Installer B) www.darwintoledo.com
+
+YUMI (Your Universal Multiboot Installer) ©2011-2016 Lance www.pendrivelinux.com
+This Open Source tool is covered under GNU General Public License Version 2
+Source Code is made available at time of download from the official YUMI page:
+http://www.pendrivelinux.com/yumi-multiboot-usb-creator/
+
+IMPORTANT! ABSOLUTELY NO WARRANTY IS BEING OFFERED WITH THIS TOOL:
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+
+THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+By Proceeding to use this tool, you agree not to hold it's author accountable 
+for any damages that could potentially arise from it's use or misuse.
+
+-------------------------------------------------------------------------------------------------
+
+Third Party Unmodified Tools Used:
+
+Built using NSIS Installer © Contributors http://nsis.sourceforge.net
+
+Syslinux © H. Peter Anvin http://syslinux.zytor.com 
+GRUB4DOS © the Gna! people + Chenall https://code.google.com/p/grub4dos-chenall/
+7-Zip is © Igor Pavlovis www.7-zip.org  
+Fat32format.exe © Tom Thornhill Ridgecorp Consultants http://www.ridgecrop.demon.co.uk
+Firadisk.img © Panot Joonkhiaw Karyonix http://reboot.pro/8804/
+
+YUMI, Grub, Fat32format, Syslinux covered under GNU GPL version 2
+7-zip is covered under an LGPL + AES License - see the License following GNU GPL 2
+Firadisk is covered under GNU GPL version 3
+
+-------------------------------------------------------------------------------------------------
+
+View the GNU GLP License in the folder
+
+The GNU GLP is a License for this project
