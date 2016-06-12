@@ -1,0 +1,15 @@
+# This Menu created with YUMI (Your Universal Multiboot Installer) http://www.pendrivelinux.com
+default 1
+timeout 30
+color NORMAL HIGHLIGHT HELPTEXT HEADING
+splashimage=/multiboot/menu/yumi.xpm.gz
+foreground=FFFFFF
+background=000000
+
+title --- Bootable ISOs + Windows XP/Vista/7/8 ---
+root
+
+title <-- Back to Main Menu
+root (hd0,0)
+chainloader (hd0)+1
+rootnoverify (hd0)

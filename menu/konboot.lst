@@ -1,0 +1,16 @@
+title Kon-Boot (CURRENT VERSION)
+map --mem /multiboot/SLUG/konboot.img (fd0)
+map --hook
+chainloader (fd0)+1
+map (hd1) (hd0)
+map --hook
+rootnoverify (fd0)
+
+title Kon-Boot v2.1 (OLD VERSION)
+map --mem /multiboot/SLUG/konbootOLD.img (fd0)
+map --hook
+chainloader (fd0)+1
+map (hd1) (hd0)
+map --hook
+rootnoverify (fd0)
+

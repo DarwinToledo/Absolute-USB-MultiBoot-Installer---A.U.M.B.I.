@@ -1,0 +1,42 @@
+This file outlines where to find the third party tools (tools authored entirely by others) that are either used in YUMI or used to create it.
+The binarysources.zip file contains the sources for grub4DOS, Syslinux, 7zip, Firadisk, and Fat32format. 
+It can be found at http://www.pendrivelinux.com/downloads/YUMI/binarysources.zip
+
+NSIS (Nullsoft Scriptable Install System) was used to create YUMI
+
+Homepage: http://nsis.sourceforge.net/Main_Page
+Binary/Source: http://nsis.sourceforge.net/Download
+
+
+grub.exe (Grub4DOS)
+
+Homepage: http://sourceforge.net/projects/grub4dos/files/
+Source: http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/grub4dos%200.4.4/grub4dos-0.4.4-src.zip/download
+Binary: http://sourceforge.net/projects/grub4dos/files/GRUB4DOS/grub4dos%200.4.4/grub4dos-0.4.4.zip/download
+
+
+syslinux.exe, chain.c32, menu.c32, vesamenu.c32, memdisk (Syslinux)
+
+Homepage: http://syslinux.zytor.com
+Binary/Source: https://www.kernel.org/pub/linux/utils/boot/syslinux/syslinux-6.03.zip
+
+
+7zG.exe, 7z.dll (7zip)
+
+Homepage: http://www.7-zip.org
+Binary: http://downloads.sourceforge.net/project/sevenzip/7-Zip/9.20/7z920.exe
+Source: http://downloads.sourceforge.net/project/sevenzip/7-Zip/9.20/7z920.tar.bz2
+
+
+Fat32format.exe (Fat32format)
+
+Homepage: http://www.ridgecrop.demon.co.uk
+Binary: http://www.ridgecrop.demon.co.uk/download/fat32format.zip
+Source: http://www.ridgecrop.demon.co.uk/download/fat32formatsrc.zip
+
+
+Firadisk.img (File/Ram Disk Driver)
+
+Homepage: http://reboot.pro/8804/
+Binary: http://www.mediafire.com/file/zqbzl5sa77tlmpl/firadisk-driver-0.0.1.30-f6.7z
+Source: http://www.mediafire.com/file/vbd2dwas2rckdj5/firadisk-src-0.0.1.30.7z

@@ -1,0 +1,44 @@
+default 0
+timeout 25
+gfxmenu /gfxfile
+
+title Puppy Arcade
+find --set-root=/multiboot/SLUG
+kernel /vmlinuz psubdir=/multiboot/SLUG psubok=TRUE
+initrd /initrd.gz
+
+title Puppy Arcade in RAM only\nRun totally in RAM, ignore saved sessions (don't load save file)
+find --set-root=/multiboot/puppy-arcade-11-k2.6.32.59
+kernel /vmlinuz psubdir=/multiboot/SLUG psubok=TRUE pfix=ram
+initrd /initrd.gz
+
+title Puppy Arcade in safe mode\nStart puppy with safest boot options
+kernel /vmlinuz psubdir=/multiboot/SLUG psubok=TRUE pfix=ram acpi=off apm=off nosmp noapic nodma nopcmcia i915.modeset=1 video=800x600
+initrd /initrd.gz
+
+title Bootup from HDD\nBootup from the master boot record of the hard disk drive
+chainloader (hd0)+1
+
+title Windows VISTA\nStart Windows if installed on HDD
+fallback 6
+find --set-root --ignore-floppies /bootmgr
+chainloader /bootmgr
+
+title Windows NT/2K/XP\nStart Windows if installed on HDD
+fallback 7
+find --set-root --ignore-floppies /ntldr
+chainloader /ntldr
+
+title Windows 9x/Me\nStart Windows if installed on HDD
+fallback 4
+find --set-root /io.sys
+chainloader /io.sys
+
+title Grub4Dos commandline\n(for experts only)
+commandline
+
+title Reboot PC
+reboot
+
+title Power Off PC
+halt

@@ -1,0 +1,23 @@
+default 0
+timeout=0
+
+#start Bitdefender
+
+parttype (hd0,3) | set check=
+set check=%check:~-5,4%
+if %check%==0x00 partnew (hd0,3) 0 0 0
+if not %check%==0x00 echo WARNING: Fourth partion is not empty, please delete it if you wish to use this boot method! && pause --wait=5 && configfile /multiboot/menu/bitdefender.lst
+
+title Boot Bitdefender
+set ISO=/multiboot/ISOS/SLUG
+find --set-root %ISO%
+parttype (hd0,3) | set check=
+set check=%check:~-5,4% 
+if %check%==0x00 partnew (hd0,3) 0x00 %ISO%
+if NOT %check%==0x00 echo ERROR: Fourth partion is not empty, please delete it if you wish to use this method! && pause --wait=5 && configfile /multiboot/menu/bitdefender.lst
+map  %ISO% (0xff)
+map --hook
+kernel (0xff)/boot/kernel.i386-pc root=/dev/ram0 real_root=/dev/loop0 loop=/rescue/livecd.squashfs cdroot_marker=/rescue/livecd.squashfs initrd udev cdroot scandelay=10 quiet slash lang=en
+initrd (0xff)/boot/initfs.i386-pc
+
+#end bitdefender-rescue-cd
