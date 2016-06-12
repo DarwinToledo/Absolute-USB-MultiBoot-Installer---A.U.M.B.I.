@@ -14,6 +14,5 @@
            !define RUBIB_LINK2         "http://rubib.darwintoledo.com/2016/06/rubib-rodri-universal-multiboot.html"
 
 
-           ;!define BUILD_ALPHA
-           !define BUILD_BETA
-           ;!define BUILD_STABLE
+           ;!define BUILD_BETA
+           !define BUILD_STABLE

@@ -54,11 +54,7 @@
 #===========================================================
 # 
 #===========================================================
-         ;!delfile "Release\*.exe"
-         !ifdef BUILD_ALPHA
-         Name "${NAME} ${VERSION}"
-         OutFile "Release\${FILENAME}-Alpha-${VERSION}.exe"
-         !endif
+
          !ifdef BUILD_BETA
          Name "${NAME} ${VERSION}"
          OutFile "Release\${FILENAME}-Beta-${VERSION}.exe"
@@ -69,7 +65,7 @@
          !endif
 
          ShowInstDetails show
-         BrandingText "${NAME} ${VERSION}"
+         BrandingText "${NAME} ${VERSION} - ${RUBIB_WEBSITE}"
          CompletedText "All Finished, Process is Complete!"
          InstallButtonText "$(Create_Button)"
 
@@ -94,7 +90,7 @@
          Page custom SelectionsPage
 
          ; Install Files Page
-         !define MUI_INSTFILESPAGE_COLORS "00FF00 000000" ;Green and Black
+         ;!define MUI_INSTFILESPAGE_COLORS "00FF00 000000" ;Green and Black
          !define MUI_INSTFILESPAGE_FINISHHEADER_TEXT $(Finish_Install)
          !define MUI_TEXT_INSTALLING_TITLE $(Install_Title)
          !define MUI_TEXT_INSTALLING_SUBTITLE $(Install_SubTitle)
