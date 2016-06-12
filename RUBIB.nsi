@@ -17,6 +17,8 @@
 # INCLUDES
 #===========================================================
 
+         !execute "Resources\Scripts\Build Counter v1.0.exe"
+
          !addincludedir "Resources\Scripts"
          !AddPluginDir  "plugins"
 
@@ -30,6 +32,7 @@
          !include       MUI2.nsh
          !include       FileFunc.nsh
          !include       LogicLib.nsh
+         !include       "Macros.nsh"
          ;!include      TextFunc.nsh
 
          !include       "Resources\Scripts\Defines.nsh"
@@ -51,7 +54,7 @@
 #===========================================================
 # 
 #===========================================================
-
+         ;!delfile "Release\*.exe"
          !ifdef BUILD_ALPHA
          Name "${NAME} ${VERSION}"
          OutFile "Release\${FILENAME}-Alpha-${VERSION}.exe"
@@ -373,10 +376,6 @@ Function SelectionsPage
 ;  ${NSD_FreeImage} $DonateHandle
  ${EndIf}
 FunctionEnd
-
-; Function OnClickDonate
-;   ExecShell "open" "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T6K3C62LC5TCG"
-; FunctionEnd 
 
 Function InstFiles_PreFunction
   StrCpy $R8 3
@@ -1225,33 +1224,33 @@ StrCpy $R9 0 ; we start on page 0
  done:
  SetShellVarContext all
  InitPluginsDir
-;  File /oname=$PLUGINSDIR\paypal.bmp "paypal.bmp"   
-  File /oname=$PLUGINSDIR\syslinux.exe "syslinux.exe"  
-  File /oname=$PLUGINSDIR\syslinux.cfg "syslinux.cfg"
-  File /oname=$PLUGINSDIR\menu.lst "menu.lst" 
-  File /oname=$PLUGINSDIR\yumi.xpm.gz "yumi.xpm.gz" 
-  File /oname=$PLUGINSDIR\grub.exe "grub.exe"  
-  File /oname=$PLUGINSDIR\info "menu\info"   
-  File /oname=$PLUGINSDIR\antivirus.cfg "menu\antivirus.cfg" 
-  File /oname=$PLUGINSDIR\system.cfg "menu\system.cfg" 
-  File /oname=$PLUGINSDIR\netbook.cfg "menu\netbook.cfg"
-  File /oname=$PLUGINSDIR\linux.cfg "menu\linux.cfg" 
-  File /oname=$PLUGINSDIR\other.cfg "menu\other.cfg"   
-  File /oname=$PLUGINSDIR\unlisted.cfg "menu\unlisted.cfg"   
-  File /oname=$PLUGINSDIR\liveusb "liveusb"   
-  File /oname=$PLUGINSDIR\7zG.exe "7zG.exe"
-  File /oname=$PLUGINSDIR\7z.dll "7z.dll"  
-  File /oname=$PLUGINSDIR\Rubib.png "Rubib.png"
-  File /oname=$PLUGINSDIR\RUBIB-Copying.txt "RUBIB-Copying.txt"
-  File /oname=$PLUGINSDIR\README.txt "README.txt"
-  File /oname=$PLUGINSDIR\license.txt "license.txt"   
-  File /oname=$PLUGINSDIR\vesamenu.c32 "vesamenu.c32" 
-  File /oname=$PLUGINSDIR\menu.c32 "menu.c32"    
-  File /oname=$PLUGINSDIR\memdisk "memdisk" 
-  File /oname=$PLUGINSDIR\chain.c32 "chain.c32" 
-  File /oname=$PLUGINSDIR\libcom32.c32 "libcom32.c32"  
-  File /oname=$PLUGINSDIR\libutil.c32 "libutil.c32"    
-  File /oname=$PLUGINSDIR\ifcpu64.c32 "ifcpu64.c32"     
+
+  ${FILEONAME} syslinux.exe
+  ${FILEONAME} menu.lst
+  ${FILEONAME} yumi.xpm.gz
+  ${FILEONAME} grub.exe
+  ${FILEONAME} 7zG.exe
+  ${FILEONAME} 7z.dll
+  ${FILEONAME} Rubib.png
+  ${FILEONAME} RUBIB-Copying.txt
+  ${FILEONAME} README.txt
+  ${FILEONAME} license.txt
+  ${FILEONAME} vesamenu.c32
+  ${FILEONAME} menu.c32
+  ${FILEONAME} memdisk
+  ${FILEONAME} chain.c32
+  ${FILEONAME} libcom32.c32
+  ${FILEONAME} libutil.c32
+  ${FILEONAME} ifcpu64.c32
+  ${FILEONAME} liveusb
+  
+  ${FILEONAME2} info
+  ${FILEONAME2} antivirus.cfg
+  ${FILEONAME2} system.cfg
+  ${FILEONAME2} netbook.cfg
+  ${FILEONAME2} linux.cfg
+  ${FILEONAME2} other.cfg
+  ${FILEONAME2} unlisted.cfg
 FunctionEnd
 
 Function onNotify_CasperSlider
@@ -1270,3 +1269,7 @@ Function SetISOSize ; Get size of ISO
  ;MessageBox MB_OK|MB_ICONINFORMATION "ISO Size: $SizeOfCasper"
  System::Call 'kernel32::CloseHandle(i r0)'
 FunctionEnd
+
+  Function .onInstSuccess
+           ExecShell "open" "${RUBIB_WEBSITE}"
+  FunctionEnd
