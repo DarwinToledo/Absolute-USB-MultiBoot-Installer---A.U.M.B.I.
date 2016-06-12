@@ -3,14 +3,32 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
      !insertmacro SetISOFileNames "--- Ubuntu 32/64 Bit ---" "" "" "" "" "" ""
 	 !insertmacro SetISOFileNames "" "" "" "" "" "" ""
 	 
- !insertmacro SetISOFileNames "Ubuntu" "ubuntu*desktop*.iso" "http://www.ubuntu.com/download/desktop" "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
- !insertmacro SetISOFileNames "Edubuntu" "edubuntu*.iso" "http://cdimage.ubuntu.com/edubuntu/releases/trusty/release/edubuntu-14.04.4-dvd-i386.iso" "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu" 
- !insertmacro SetISOFileNames "Kubuntu" "kubuntu*desktop*.iso" "http://kubuntu.org/getkubuntu/" "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
- !insertmacro SetISOFileNames "Lubuntu" "lubuntu*desktop*.iso" "http://cdimage.ubuntu.com/lubuntu/releases/15.10/release/lubuntu-15.10-desktop-i386.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu" 
- !insertmacro SetISOFileNames "Xubuntu" "xubuntu*desktop*.iso" "http://cdimage.ubuntu.com/xubuntu/releases/15.10/release/xubuntu-15.10-desktop-i386.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
- !insertmacro SetISOFileNames "Ubuntu Gnome" "ubuntu-gnome*desktop*.iso" "http://cdimage.ubuntu.com/ubuntu-gnome/releases/wily/release/ubuntu-gnome-15.10-desktop-i386.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
- !insertmacro SetISOFileNames "Ubuntu Server" "ubuntu*server*.iso" "http://releases.ubuntu.com/trusty/ubuntu-14.04.4-server-i386.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
- !insertmacro SetISOFileNames "Ubuntu Studio" "ubuntustudio*.iso" "http://cdimage.ubuntu.com/ubuntustudio/releases/wily/release/ubuntustudio-15.10-dvd-i386.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio" 
+ !insertmacro SetISOFileNames "Ubuntu 32/64 bit"      "ubuntu*desktop*.iso"            "http://www.ubuntu.com/download/desktop" "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
+
+ !insertmacro SetISOFileNames "Kubuntu 32/64 bit"     "kubuntu*desktop*.iso"           "http://kubuntu.org/getkubuntu/" "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
+
+ !insertmacro SetISOFileNames "Lubuntu 32 bit"        "lubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04-desktop-i386.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
+ !insertmacro SetISOFileNames "Lubuntu 64 bit"        "lubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04-desktop-amd64.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
+ !insertmacro SetISOFileNames "Lubuntu PowerPC"       "lubuntu*desktop*powerpc.iso"    "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04-desktop-powerpc.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
+
+ !insertmacro SetISOFileNames "Xubuntu 32 bit"        "xubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04-desktop-i386.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
+ !insertmacro SetISOFileNames "Xubuntu 64 bit"        "xubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04-desktop-amd64.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
+
+ !insertmacro SetISOFileNames "Ubuntu Gnome 32 bit"   "ubuntu-gnome*desktop*i386.iso"  "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04-desktop-i386.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
+ !insertmacro SetISOFileNames "Ubuntu Gnome 64 bit"   "ubuntu-gnome*desktop*amd64.iso" "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04-desktop-amd64.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
+
+ !insertmacro SetISOFileNames "Ubuntu Mate 32 bit"    "ubuntu-mate*desktop*i386.iso"   "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04-desktop-i386.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
+ !insertmacro SetISOFileNames "Ubuntu Mate 64 bit"    "ubuntu-mate*desktop*amd64.iso"  "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04-desktop-amd64.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
+
+ !insertmacro SetISOFileNames "Ubuntu Server 32 bit"  "ubuntu*server*i386.iso"         "http://releases.ubuntu.com/16.04/ubuntu-16.04-server-i386.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
+ !insertmacro SetISOFileNames "Ubuntu Server 64 bit"  "ubuntu*server*amd64.iso"        "http://releases.ubuntu.com/16.04/ubuntu-16.04-server-amd64.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
+
+ !insertmacro SetISOFileNames "Ubuntu Studio 32 bit"  "ubuntustudio*i386.iso"          "http://cdimage.ubuntu.com/ubuntustudio/releases/16.04/release/ubuntustudio-16.04-dvd-i386.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
+ !insertmacro SetISOFileNames "Ubuntu Studio 64 bit"  "ubuntustudio*amd64.iso"         "http://cdimage.ubuntu.com/ubuntustudio/releases/16.04/release/ubuntustudio-16.04-dvd-amd64.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
+
+ !insertmacro SetISOFileNames "Edubuntu 32 bit"       "edubuntu*i386.iso"              "http://cdimage.ubuntu.com/edubuntu/releases/trusty/release/edubuntu-14.04.4-dvd-i386.iso" "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
+ !insertmacro SetISOFileNames "Edubuntu 64 bit"       "edubuntu*amd64.iso"             "http://cdimage.ubuntu.com/edubuntu/releases/trusty/release/edubuntu-14.04.4-dvd-amd64.iso" "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
+
 ;REVISIT !insertmacro SetISOFileNames "Ubuntu Rescue Remix (System Rescue)" "ubuntu-rescue-remix*.iso" "http://ubuntu-rescue-remix.org/Download" "NULL" "system.cfg" "http://ubuntu-rescue-remix.org" "URR"
 
      !insertmacro SetISOFileNames "" "" "" "" "" "" ""

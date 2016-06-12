@@ -3,8 +3,8 @@
 # Developed by Darwin Toledo http://www.darwintoledo.com
 # Based on YUMI
 #===========================================================
-
-; YUMI (Your Universal Multiboot Installer) Copyright ©2011-2016 Lance http://www.pendrivelinux.com (See YUMI-Copying.txt and YUMI-Readme.txt for more information, Credits, and Licensing)
+; RUBIB (Rodri Universal multiBoot Installer B) Copyleft ©2016 Darwin Toledo http://www.darwintoledo.com (See YUMI-Copying.txt and RUBIB-Readme.txt for more information, Credits, and Licensing)
+; YUMI (Your Universal Multiboot Installer) Copyright ©2011-2016 Lance http://www.pendrivelinux.com 
 ; 7-Zip Copyright © Igor Pavlovis http://7-zip.org (unmodified binaries were used)
 ; Syslinux © H. Peter Anvin http://syslinux.zytor.com (unmodified binary used)
 ; Firadisk.img © Panot Joonkhiaw Karyonix http://reboot.pro/8804/ (unmodified binary used)
