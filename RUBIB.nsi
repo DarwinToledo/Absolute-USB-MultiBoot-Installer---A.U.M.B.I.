@@ -1226,6 +1226,7 @@ StrCpy $R9 0 ; we start on page 0
  InitPluginsDir
 
   ${FILEONAME} syslinux.exe
+  ${FILEONAME} syslinux.cfg
   ${FILEONAME} menu.lst
   ${FILEONAME} yumi.xpm.gz
   ${FILEONAME} grub.exe
