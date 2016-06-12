@@ -68,7 +68,7 @@
          ShowInstDetails show
          BrandingText "${NAME} ${VERSION}"
          CompletedText "All Finished, Process is Complete!"
-         InstallButtonText "Create"
+         InstallButtonText "$(Create_Button)"
 
 #===========================================================
 #
@@ -76,7 +76,7 @@
          ; Interface settings
          !define MUI_FINISHPAGE_NOAUTOCLOSE
          !define MUI_HEADERIMAGE
-         !define MUI_HEADERIMAGE_BITMAP "usb-logo-nsis.bmp"
+         !define MUI_HEADERIMAGE_BITMAP "Resources\Images\usb-logo-nsis.bmp"
          !define MUI_HEADERIMAGE_BITMAP_NOSTRETCH
          !define MUI_HEADERIMAGE_RIGHT
 
@@ -104,7 +104,7 @@
          !define MUI_FINISHPAGE_TEXT $(Finish_Text)
          !define MUI_FINISHPAGE_LINK $(Finish_Link)
          !define MUI_FINISHPAGE_LINK_LOCATION "http://www.pendrivelinux.com/boot-multiple-iso-from-usb-multiboot-usb/"
-         !define MUI_WELCOMEFINISHPAGE_BITMAP "finish.bmp"
+         !define MUI_WELCOMEFINISHPAGE_BITMAP "Resources\Images\finish.bmp"
          !define MUI_PAGE_CUSTOMFUNCTION_PRE Finish_PreFunction
          !insertmacro MUI_PAGE_FINISH
 

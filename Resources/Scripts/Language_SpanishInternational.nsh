@@ -29,6 +29,7 @@ LangString Install_Finish_Sucess    ${RODRILANG} "${NAME} sucessfully $InUnStall
 LangString Finish_Install           ${RODRILANG} "$InUnStallation is Complete."
 LangString Finish_Title             ${RODRILANG} "${NAME} has completed the $InUnStallation."
 LangString Finish_Text              ${RODRILANG} "Your Selections have been $InUnStalled on your USB drive.$\r$\n$\r$\nFeel Free to run this tool again to $InUnStall more Distros.$\r$\n$\r$\nYUMI will keep track of selections you have already $InUnStalled."
-LangString Finish_Link              ${RODRILANG} "Visit the YUMI Tutorial Page"
+LangString Finish_Link              ${RODRILANG} "Visit the ${NAME} Tutorial Page"
+LangString Create_Button            ${RODRILANG} "Crear"
 
 !undef RODRILANG

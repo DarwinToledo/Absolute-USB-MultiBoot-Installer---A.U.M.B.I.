@@ -10,7 +10,7 @@
            !define VERSION             "1.0.0.2"
 
            #INST RESOURCES
-           !define MUI_ICON    "${NSISDIR}\Contrib\Graphics\Icons\nsis1-install.ico"
+           !define MUI_ICON    "${NSISDIR}\Contrib\Graphics\Icons\box-install.ico"
 
 
            !define BUILD_ALPHA
