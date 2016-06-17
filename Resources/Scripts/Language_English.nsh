@@ -56,6 +56,26 @@
         LangString RL_ODL                   ${RODRILANG} "Opened Download Link"
         LangString RL_DL1                   ${RODRILANG} "Download Link"
 
+        LangString MENU_LABEL_LUNIX_DIST    ${RODRILANG} "Linux Distributions"
+        LangString MENU_LABEL_SYS_TOOLS     ${RODRILANG} "System Tools"
+        LangString MENU_LABEL_ANTIVIR       ${RODRILANG} "Antivirus Tools"
+        LangString MENU_LABEL_NETBOOK       ${RODRILANG} "Netbook Distributions"
+        LangString MENU_LABEL_OTHER_OS      ${RODRILANG} "Other OS and Tools"
+        LangString MENU_LABEL_UNLISTED      ${RODRILANG} "Unlisted ISO (via SYSLINUX)"
+        LangString MENU_LABEL_GRUB          ${RODRILANG} "GRUB Bootable ISOs"
+        LangString MENU_LABEL_GRUB_LARGE    ${RODRILANG} "GRUB Bootable ISOs and Windows XP/7/8"
+
         ;LangString LABEL           ${RODRILANG} ""
 
 !undef RODRILANG
+
+
+
+
+
+
+
+
+
+
+

@@ -38,7 +38,7 @@
          !include       "Resources\Scripts\Defines.nsh"
          !include       "Variables.nsh"
 
-!include DiskVoodoo.nsh ; DiskVoodoo Script created by Lance http://www.pendrivelinux.com
+         !include DiskVoodoo.nsh ; DiskVoodoo Script created by Lance http://www.pendrivelinux.com
 
 #===========================================================
 # MoreInfo Plugin - Adds Version Tab fields to Properties. Plugin created by onad http://nsis.sourceforge.net/MoreInfo_plug-in
@@ -57,11 +57,11 @@
 
          !ifdef BUILD_BETA
          Name "${NAME} ${VERSION}"
-         OutFile "Release\${FILENAME}-Beta-${VERSION}.exe"
+         OutFile "C:\Users\${DESKTOP_USER}\Desktop\Release\${FILENAME}-Beta-${VERSION}.exe"
          !endif
          !ifdef BUILD_STABLE
          Name "${NAME} ${VERSION}"
-         OutFile "Release\${FILENAME}-${VERSION}.exe"
+         OutFile "C:\Users\${DESKTOP_USER}\Desktop\Release\${FILENAME}-${VERSION}.exe"
          !endif
 
          ShowInstDetails show
@@ -1152,19 +1152,19 @@ FunctionEnd
 
 Function Config2Write
  ${If} $Config2Use == "linux.cfg"
-  ${WriteToSysFile} "label Linux Distributions$\r$\nmenu label Linux Distributions ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/linux.cfg" $R0 
+  ${WriteToSysFile} "label $(MENU_LABEL_LUNIX_DIST)$\r$\nmenu label $(MENU_LABEL_LUNIX_DIST) ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/linux.cfg" $R0
  ${ElseIf} $Config2Use == "system.cfg"
-  ${WriteToSysFile} "label System Tools$\r$\nmenu label System Tools ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/system.cfg" $R0
+  ${WriteToSysFile} "label $(MENU_LABEL_SYS_TOOLS) $\r$\nmenu label $(MENU_LABEL_SYS_TOOLS) ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/system.cfg" $R0
  ${ElseIf} $Config2Use == "antivirus.cfg"
-  ${WriteToSysFile} "label Antivirus Tools$\r$\nmenu label Antivirus Tools ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/antivirus.cfg" $R0 
+  ${WriteToSysFile} "label $(MENU_LABEL_ANTIVIR)$\r$\nmenu label $(MENU_LABEL_ANTIVIR) ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/antivirus.cfg" $R0
  ${ElseIf} $Config2Use == "netbook.cfg"
-  ${WriteToSysFile} "label Netbook Distributions$\r$\nmenu label Netbook Distributions ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/netbook.cfg" $R0 
+  ${WriteToSysFile} "label $(MENU_LABEL_NETBOOK) $\r$\nmenu label $(MENU_LABEL_NETBOOK) ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/netbook.cfg" $R0
  ${ElseIf} $Config2Use == "other.cfg"
-  ${WriteToSysFile} "label Other OS and Tools$\r$\nmenu label Other OS and Tools ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/other.cfg" $R0 
+  ${WriteToSysFile} "label $(MENU_LABEL_OTHER_OS)$\r$\nmenu label $(MENU_LABEL_OTHER_OS) ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/other.cfg" $R0
  ${ElseIf} $Config2Use == "unlisted.cfg"
-  ${WriteToSysFile} "label Unlisted ISO (via SYSLINUX)$\r$\nmenu label  Unlisted ISO (via SYSLINUX) ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/unlisted.cfg" $R0  
+  ${WriteToSysFile} "label $(MENU_LABEL_UNLISTED)$\r$\nmenu label  $(MENU_LABEL_UNLISTED) ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/unlisted.cfg" $R0
  ${ElseIf} $Config2Use == "menu.lst"
-  ${WriteToSysFile} "label GRUB Bootable ISOs$\r$\nmenu label GRUB Bootable ISOs and Windows XP/7/8 ->$\r$\nMENU INDENT 1$\r$\nKERNEL /multiboot/grub.exe$\r$\nAPPEND --config-file=/multiboot/menu/menu.lst" $R0 
+  ${WriteToSysFile} "label $(MENU_LABEL_GRUB)$\r$\nmenu label $(MENU_LABEL_GRUB_LARGE) ->$\r$\nMENU INDENT 1$\r$\nKERNEL /multiboot/grub.exe$\r$\nAPPEND --config-file=/multiboot/menu/menu.lst" $R0
   CopyFiles "$PLUGINSDIR\yumi.xpm.gz" "$BootDir\multiboot\menu\yumi.xpm.gz" 
  ${EndIf} 
 FunctionEnd
@@ -1240,12 +1240,12 @@ StrCpy $R9 0 ; we start on page 0
   ${FILEONAME0} liveusb
 
   ${FILEONAME2} info
-  ${FILEONAME2} antivirus.cfg
-  ${FILEONAME2} system.cfg
-  ${FILEONAME2} netbook.cfg
-  ${FILEONAME2} linux.cfg
-  ${FILEONAME2} other.cfg
-  ${FILEONAME2} unlisted.cfg
+  ${FILEONAMELANG2} antivirus.cfg
+  ${FILEONAMELANG2} system.cfg
+  ${FILEONAMELANG2} netbook.cfg
+  ${FILEONAMELANG2} linux.cfg
+  ${FILEONAMELANG2} other.cfg
+  ${FILEONAMELANG2} unlisted.cfg
 
   ${FILEONAME} Rubib.png
   ${FILEONAME} RUBIB-Copying.txt

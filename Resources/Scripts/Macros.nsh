@@ -30,3 +30,15 @@
 
        !macroend
        !define FILEONAMELANG "!insertmacro FILEONAMELANG "
+
+       !macro FILEONAMELANG2 FILE
+ 	${If} $LANGUAGE == ${LANG_ENGLISH}
+		StrCpy $DefaultLNG "EnglishFiles"
+              File /oname=$PLUGINSDIR\${FILE} "menu\English_${FILE}"
+        ${ElseIf} $LANGUAGE == ${LANG_SPANISHINTERNATIONAL}
+		StrCpy $DefaultLNG "SpanishInternationalFiles"
+              File /oname=$PLUGINSDIR\${FILE} "menu\SpanishInternational_${FILE}"
+        ${Endif}
+
+       !macroend
+       !define FILEONAMELANG2 "!insertmacro FILEONAMELANG2 "
