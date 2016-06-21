@@ -6,7 +6,7 @@
 
            !define NAME                "RUBIB"
            !define FILENAME            "RUBIB"
-           !define DESKTOP_USER        "Ro"
+           !define DESKTOP_USER        "Rodrigo"
            !define VERSION             "1.5.0.${BUILD_NUMBER}"
 
            #INST RESOURCES

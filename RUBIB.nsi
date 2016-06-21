@@ -57,11 +57,11 @@
 
          !ifdef BUILD_BETA
          Name "${NAME} ${VERSION}"
-         OutFile "C:\Users\${DESKTOP_USER}\Desktop\Release\${FILENAME}-Beta-${VERSION}.exe"
+         OutFile "C:\Users\${DESKTOP_USER}\Desktop\${FILENAME}-Beta-${VERSION}.exe"
          !endif
          !ifdef BUILD_STABLE
          Name "${NAME} ${VERSION}"
-         OutFile "C:\Users\${DESKTOP_USER}\Desktop\Release\${FILENAME}-${VERSION}.exe"
+         OutFile "C:\Users\${DESKTOP_USER}\Desktop\${FILENAME}-${VERSION}.exe"
          !endif
 
          ShowInstDetails show
