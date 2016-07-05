@@ -1,5 +1,21 @@
+/*
+ * This file is part of YUMI
+ *
+ * YUMI is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * any later version.
+ *
+ * YUMI is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with YUMI.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 ; ------------ Install Distros Macro -------------- 
-;      CopyLeft Lance - Pendrivelinux.com
 
 !include ReplaceInFile.nsh
 Function FindConfig ; Set config path and file
@@ -182,20 +198,19 @@ FunctionEnd
  ;Call OldSysFix  ; Check for and replace vesamenu.c32, menu.c32, chain.c32 if found 
  ;${WriteToFile} "#start $JustISOName$\r$\nLABEL $JustISOName$\r$\nMENU LABEL $JustISOName$\r$\nCONFIG /boot/isolinux/isolinux.cfg$\r$\nAPPEND /boot/isolinux$\r$\n#end $JustISOName" $R0
  
- ; Linux Mint (New Method) 
+; Linux Mint (New Method) 
  ${ElseIf} $DistroName == "Linux Mint"
+  ${OrIf} $DistroName == "AVIRA AntiVir Rescue CD (Virus Scanner)"
+  ${OrIf} $DistroName == "Cub Linux"
  ${AndIfNot} $JustISO == "linuxmint-201403-cinnamon-dvd-32bit.iso"
  ${AndIfNot} $JustISO == "linuxmint-201403-mate-dvd-32bit.iso" 
  ${AndIfNot} $JustISO == "linuxmint-201403-cinnamon-dvd-64bit.iso"
  ${AndIfNot} $JustISO == "linuxmint-201403-mate-dvd-64bit.iso"  
- CopyFiles $ISOFile "$BootDir\multiboot\$JustISOName\$JustISO" ; Copy the ISO to ISO Directory
- ExecWait '"$PLUGINSDIR\7zG.exe" e "$ISOFile" -ir!*nitrd.* -ir!*mlinuz -o"$BootDir\multiboot\$JustISOName\" -y'  
- Rename "$BootDir\multiboot\$JustISOName\initrd.gz" "$BootDir\multiboot\$JustISOName\initrd.lz"  
+ CopyFiles $ISOFile "$BootDir\multiboot\$JustISOName\$JustISO" ; Copy the ISO to Directory
+ ExecWait '"$PLUGINSDIR\7zG.exe" e "$ISOFile" -ir!*nitrd.* -ir!*mlinu* -o"$BootDir\multiboot\$JustISOName\" -y'  
+ Rename "$BootDir\multiboot\$JustISOName\initrd.gz" "$BootDir\multiboot\$JustISOName\initrd.lz" 
+ Rename "$BootDir\multiboot\$JustISOName\vmlinuz.efi" "$BootDir\multiboot\$JustISOName\vmlinuz" 
  ${WriteToFile} "#start $JustISOName$\r$\nLABEL $JustISOName$\r$\nMENU LABEL $JustISOName$\r$\nMENU INDENT 1$\r$\nKERNEL /multiboot/$JustISOName/vmlinuz$\r$\nAPPEND initrd=/multiboot/$JustISOName/initrd.lz cdrom-detect/try-usb=true persistent persistent-path=/multiboot/$JustISOName noprompt splash boot=casper iso-scan/filename=/multiboot/$JustISOName/$JustISO$\r$\n#end $JustISOName" $R0
- 
- ${If} $Casper != "0"
- Call CasperScript
- ${EndIf}
  
 ; OpenSUSE 32bit 
  ${ElseIf} $DistroName == "OpenSUSE 32bit"
@@ -363,14 +378,39 @@ FunctionEnd
   !insertmacro ReplaceInFile "initrd=/casper/" "cdrom-detect/try-usb=true noprompt floppy.allowed_drive_mask=0 ignore_uuid live-media-path=/multiboot/$JustISOName/casper/ initrd=/multiboot/$JustISOName/casper/" "all" "all" "$BootDir\multiboot\$JustISOName\syslinux\syslinux.cfg"  
   !insertmacro ReplaceInFile "kernel /casper/" "kernel /multiboot/$JustISOName/casper/" "all" "all" "$BootDir\multiboot\$JustISOName\syslinux\syslinux.cfg"  
   ${EndIf}
-  
+
+; Disable Ubuntu modified gfxboot as older Ubuntu bootlogo archives might not contain all necessary files for newer syslinux 6+.
+   ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\isolinux\isolinux.cfg" ; Rename the following for isolinux.cfg 
+   	 ${StrContains} $0 "buntu-17" "$JustISO"   
+	 ${StrContains} $1 "buntu-16" "$JustISO"
+     ${StrContains} $2 "buntu-15" "$JustISO" 
+     ${If} $0 != "buntu-17" 
+     ${AndIf} $1 != "buntu-16"  
+	 ${AndIf} $2 != "buntu-15"  
+     !insertmacro ReplaceInFile "ui gfxboot bootlogo" "# ui gfxboot bootlogo" "all" "all" "$BootDir\multiboot\$JustISOName\isolinux\isolinux.cfg"   
+     ${EndIf}
+   ${EndIf}  
+   ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\syslinux\syslinux.cfg"
+   	 ${StrContains} $0 "buntu-17" "$JustISO"   
+	 ${StrContains} $1 "buntu-16" "$JustISO"
+     ${StrContains} $2 "buntu-15" "$JustISO" 
+     ${If} $0 != "buntu-17" 
+     ${AndIf} $1 != "buntu-16"  
+	 ${AndIf} $2 != "buntu-15"  
+     !insertmacro ReplaceInFile "ui gfxboot bootlogo" "# ui gfxboot bootlogo" "all" "all" "$BootDir\multiboot\$JustISOName\syslinux\syslinux.cfg"      
+     ${EndIf}
+   ${EndIf}
+; Various Antivius (New Method) 
+  ${If} $DistroName == "ESET SysRescue Live"
+  ${OrIf} $DistroName == "Dr.Web LiveDisk" 
 ; Disable Ubuntu modified gfxboot as the Ubuntu bootlogo archive does not currently contain all necessary files for newer syslinux 6+.
-   ; ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\isolinux\isolinux.cfg" ; Rename the following for isolinux.cfg  
-   ; !insertmacro ReplaceInFile "ui gfxboot bootlogo" "# ui gfxboot bootlogo" "all" "all" "$BootDir\multiboot\$JustISOName\isolinux\isolinux.cfg"   
-   ; ${EndIf} 
-   ; ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\syslinux\syslinux.cfg"
-   ; !insertmacro ReplaceInFile "ui gfxboot bootlogo" "# ui gfxboot bootlogo" "all" "all" "$BootDir\multiboot\$JustISOName\syslinux\syslinux.cfg"      
-   ; ${EndIf}
+    ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\isolinux\isolinux.cfg" ; Rename the following for isolinux.cfg  
+    !insertmacro ReplaceInFile "ui gfxboot bootlogo" "# ui gfxboot bootlogo" "all" "all" "$BootDir\multiboot\$JustISOName\isolinux\isolinux.cfg"   
+    ${EndIf} 
+    ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\syslinux\syslinux.cfg"
+    !insertmacro ReplaceInFile "ui gfxboot bootlogo" "# ui gfxboot bootlogo" "all" "all" "$BootDir\multiboot\$JustISOName\syslinux\syslinux.cfg"      
+    ${EndIf}
+  ${EndIf}
   
   ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\boot\grub\loopback.cfg" ; Rename the following for grub loopback.cfg
   !insertmacro ReplaceInFile "file=/cdrom/preseed/" "file=/cdrom/multiboot/$JustISOName/preseed/" "all" "all" "$BootDir\multiboot\$JustISOName\boot\grub\loopback.cfg"  
@@ -506,7 +546,7 @@ FunctionEnd
    !insertmacro ReplaceInFile "initrd=/boot" "initrd=/multiboot/$JustISOName/boot" "all" "all" "$BootDir\multiboot\$JustISOName\$CopyPath\$ConfigFile"  
    ${EndIf}
    
-; WifiSlax ; Entry initially populated by Lance, completed and submitted by Geminis Demon 
+; WifiSlax ; Entry initially populated by Lance, completed and submitted by Geminis Demon - continued fixes and updates by Lance 
    ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\boot\menus\wifislax.cfg"  
    !insertmacro ReplaceInFile "/boot/" "/multiboot/$JustISOName/NULL/" "all" "all" "$BootDir\multiboot\$JustISOName\boot\syslinux\syslinux.cfg" 
    !insertmacro ReplaceInFile "/NULL/" "/boot/" "all" "all" "$BootDir\multiboot\$JustISOName\boot\syslinux\syslinux.cfg"     
@@ -547,6 +587,20 @@ FunctionEnd
    !insertmacro ReplaceInFile "/NULL" "/vmlinuz2" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-pae.cfg"
    !insertmacro ReplaceInFile "changes=" "NULL=/multiboot/$JustISOName" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-pae.cfg"
    !insertmacro ReplaceInFile "NULL=" "changes=" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-pae.cfg"
+   
+   !insertmacro ReplaceInFile "/boot/" "/multiboot/$JustISOName/NULL/" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\kernel-smp.cfg" 
+   !insertmacro ReplaceInFile "/NULL/" "/boot/" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\kernel-smp.cfg"
+   !insertmacro ReplaceInFile "/vmlinuz2" "/NULL from=multiboot/$JustISOName noauto" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\kernel-smp.cfg"
+   !insertmacro ReplaceInFile "/NULL" "/vmlinuz2" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\kernel-smp.cfg"
+   !insertmacro ReplaceInFile "changes=" "NULL=/multiboot/$JustISOName" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\kernel-smp.cfg"
+   !insertmacro ReplaceInFile "NULL=" "changes=" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\kernel-smp.cfg"
+
+   !insertmacro ReplaceInFile "/boot/" "/multiboot/$JustISOName/NULL/" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-smp.cfg"
+   !insertmacro ReplaceInFile "/NULL/" "/boot/" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-smp.cfg"   
+   !insertmacro ReplaceInFile "/vmlinuz2" "/NULL from=multiboot/$JustISOName noauto" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-smp.cfg"
+   !insertmacro ReplaceInFile "/NULL" "/vmlinuz2" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-smp.cfg"
+   !insertmacro ReplaceInFile "changes=" "NULL=/multiboot/$JustISOName" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-smp.cfg"
+   !insertmacro ReplaceInFile "NULL=" "changes=" "all" "all" "$BootDir\multiboot\$JustISOName\boot\menus\english-kernel-smp.cfg"   
    ${EndIf}
    
    ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\boot\core.gz" ; TinyCore specific
@@ -1138,8 +1192,7 @@ FunctionEnd
  ${EndIf}   
 
 ; Enable Casper  
- ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\casper\filesystem.squashfs" ; Must be Ubuntu Based
-  ${AndIf} $Persistence == "casper" ; Casper
+  ${If} $Persistence == "casper" ; Casper
   ${AndIf} $Casper != "0" ; Casper Slider (Size) was not Null
   ; Add Boot Code Persistent
   ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\isolinux\txt.cfg" ; Rename the following for isolinux txt.cfg
@@ -1152,8 +1205,8 @@ FunctionEnd
   ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\boot\grub\loopback.cfg" ; Rename the following for grub loopback.cfg
   !insertmacro ReplaceInFile "cdrom-detect/try-usb=true noprompt" "cdrom-detect/try-usb=true persistent persistent-path=/multiboot/$JustISOName noprompt" "all" "all" "$BootDir\multiboot\$JustISOName\boot\grub\loopback.cfg"  
   ${EndIf} 
-  ; Create Casper-rw file
-   Call CasperScript  
+; Create Casper-rw file
+  Call CasperScript  
  ${EndIf}
  
 Call WriteStuff

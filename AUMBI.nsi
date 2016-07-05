@@ -1,9 +1,9 @@
 #===========================================================
-# RUBIB (Rodri Universal multiBoot Installer B)
+# AUMBI (Absolute USB MultiBoot Installer)
 # Developed by Darwin Toledo http://www.darwintoledo.com
 # Based on YUMI
 #===========================================================
-; RUBIB (Rodri Universal multiBoot Installer B) Copyleft ©2016 Darwin Toledo http://www.darwintoledo.com (See YUMI-Copying.txt and RUBIB-Readme.txt for more information, Credits, and Licensing)
+; AUMBI Copyleft ©2016 Darwin Toledo http://www.darwintoledo.com (See YUMI-Copying.txt and AUMBI-Readme.txt for more information, Credits, and Licensing)
 ; YUMI (Your Universal Multiboot Installer) Copyright ©2011-2016 Lance http://www.pendrivelinux.com 
 ; 7-Zip Copyright © Igor Pavlovis http://7-zip.org (unmodified binaries were used)
 ; Syslinux © H. Peter Anvin http://syslinux.zytor.com (unmodified binary used)
@@ -1010,7 +1010,7 @@ Function DoSyslinux ; Install Syslinux on USB
 ; Create and Copy files to your destination
   DetailPrint "Adding required files to the $BootDir\multiboot directory..." 
   CopyFiles "$PLUGINSDIR\syslinux.cfg" "$BootDir\multiboot\syslinux.cfg"
-  CopyFiles "$PLUGINSDIR\Rubib.png" "$BootDir\multiboot\Rubib.png"
+  CopyFiles "$PLUGINSDIR\AUMBI.png" "$BootDir\multiboot\AUMBI.png"
   CopyFiles "$PLUGINSDIR\YUMI-Copying.txt" "$BootDir\multiboot\YUMI-Copying.txt" 
   CopyFiles "$PLUGINSDIR\YUMI-Readme.txt" "$BootDir\multiboot\YUMI-Readme.txt" 
   CopyFiles "$PLUGINSDIR\license.txt" "$BootDir\multiboot\license.txt"   
@@ -1034,7 +1034,7 @@ Function DoSyslinux ; Install Syslinux on USB
   
   ${IfNot} ${FileExists} $BootDir\multiboot\libutil.c32 ; Old Syslinux files need to be replaced
   DetailPrint "Adding required files to the $BootDir\multiboot directory..." 
-  CopyFiles "$PLUGINSDIR\Rubib.png" "$BootDir\multiboot\Rubib.png"
+  CopyFiles "$PLUGINSDIR\AUMBI.png" "$BootDir\multiboot\AUMBI.png"
   CopyFiles "$PLUGINSDIR\YUMI-Copying.txt" "$BootDir\multiboot\YUMI-Copying.txt" 
   CopyFiles "$PLUGINSDIR\YUMI-Readme.txt" "$BootDir\multiboot\YUMI-Readme.txt" 
   CopyFiles "$PLUGINSDIR\license.txt" "$BootDir\multiboot\license.txt"   
@@ -1165,7 +1165,7 @@ Function Config2Write
   ${WriteToSysFile} "label $(MENU_LABEL_UNLISTED)$\r$\nmenu label  $(MENU_LABEL_UNLISTED) ->$\r$\nMENU INDENT 1$\r$\nCONFIG /multiboot/menu/unlisted.cfg" $R0
  ${ElseIf} $Config2Use == "menu.lst"
   ${WriteToSysFile} "label $(MENU_LABEL_GRUB)$\r$\nmenu label $(MENU_LABEL_GRUB_LARGE) ->$\r$\nMENU INDENT 1$\r$\nKERNEL /multiboot/grub.exe$\r$\nAPPEND --config-file=/multiboot/menu/menu.lst" $R0
-  CopyFiles "$PLUGINSDIR\yumi.xpm.gz" "$BootDir\multiboot\menu\yumi.xpm.gz" 
+
  ${EndIf} 
 FunctionEnd
 
@@ -1225,7 +1225,6 @@ StrCpy $R9 0 ; we start on page 0
 
   ${FILEONAME0} syslinux.exe
   ${FILEONAME0} menu.lst
-  ${FILEONAME0} yumi.xpm.gz
   ${FILEONAME0} grub.exe
   ${FILEONAME0} 7zG.exe
   ${FILEONAME0} 7z.dll
@@ -1247,8 +1246,8 @@ StrCpy $R9 0 ; we start on page 0
   ${FILEONAMELANG2} other.cfg
   ${FILEONAMELANG2} unlisted.cfg
 
-  ${FILEONAME} Rubib.png
-  ${FILEONAME} RUBIB-Copying.txt
+  ${FILEONAME} AUMBI.png
+  ${FILEONAME} AUMBI-Copying.txt
   ${FILEONAME} README.txt
   ${FILEONAME} license.txt
 
