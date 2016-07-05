@@ -498,14 +498,14 @@ Function EnableNext ; Enable Install Button
 FunctionEnd
 
 Function DownloadLinks
-MessageBox MB_YESNO|MB_ICONQUESTION "Launch the Download Link?$\r$\nLet the download finish before moving to step 2." IDYES DownloadIt IDNO Skip
+MessageBox MB_YESNO|MB_ICONQUESTION "$(MB_DL2)" IDYES DownloadIt IDNO Skip
   Skip: ; Reset Download Checkbox Options 
   ${NSD_Uncheck} $DownloadISO 
-  ${NSD_SetText} $DownloadISO "Download Link"  
+  ${NSD_SetText} $DownloadISO "$(RL_DL2)"
   EnableWindow $DownloadISO 1
   Goto end
   DownloadIt:
-  ${NSD_SetText} $LabelISOSelection "Step 3: Once your download has finished, Browse and select the ISO."  
+  ${NSD_SetText} $LabelISOSelection "$(RL2_STEP3)"
   EnableWindow $DownloadISO 0
   ExecShell "open" "$DownLink"    
   end:
@@ -572,14 +572,14 @@ Function OnSelectDistro
   StrCpy $ISOFileName "$ISOFileName" 
   StrCpy $SomeFileExt "$ISOFileName" "" -3 ; Grabs the last 3 characters of the file name... zip or iso?
   StrCpy $FileFormat "$SomeFileExt" ; Set file type to look for zip, tar, iso etc...
-  ${NSD_SetText} $LabelISOSelection "Step 3: Browse and Select your $ISOFileName"
-  ${NSD_SetText} $ISOFileTxt "Browse to your $ISOFileName  -->"
+  ${NSD_SetText} $LabelISOSelection "$(BW2_STEP3)"
+  ${NSD_SetText} $ISOFileTxt "$(BW_ISO_1)"
   SetCtlColors $ISOFileTxt FF0000 FFFFFF  
   StrCpy $ISOTest "" ; Set to null until a new ISO selection is made
   ${EndIf}
   
 ; Redraw Home page Links as necessary
-  ${NSD_SetText} $DistroLink "Visit the $OfficialName Home Page" 
+  ${NSD_SetText} $DistroLink "$(VTO_HOME1)"
   ShowWindow $DistroLink 0
   ${If} $OfficialName == ""
    ${OrIf} $Removal == "Yes"
@@ -599,11 +599,11 @@ Function OnSelectDistro
   ${GetBaseName} "$JustISO" $JustISOName
   ${GetParent} "$TheISO" $JustISOPath  
   EnableWindow $DownloadISO 0
-  ${NSD_SetText} $DownloadISO "We Found and Selected the $SomeFileExt."    
+  ${NSD_SetText} $DownloadISO "$(WE_SELECT1)"
   EnableWindow $ISOSelection 0 
   SetCtlColors $ISOFileTxt 009900 FFFFFF  
   ${NSD_SetText} $ISOFileTxt $ISOFile 
-  ${NSD_SetText} $LabelISOSelection "Step 3 DONE: $ISOFileName Found and Selected!"  
+  ${NSD_SetText} $LabelISOSelection "$(DONE_STEP3)"
   StrCpy $ISOTest "$TheISO" ; Populate ISOTest so we can enable Next    
   Call EnableNext  
   
@@ -613,10 +613,10 @@ Function OnSelectDistro
   EnableWindow $DownloadISO 1
   EnableWindow $ISOSelection 1
   ${NSD_Uncheck} $DownloadISO  
-  ${NSD_SetText} $DownloadISO "Download Link"       
-  SetCtlColors $ISOFileTxt FF9B00 FFFFFF  
-  ${NSD_SetText} $ISOFileTxt "Browse to and select the $ISOFileName" 
-  ${NSD_SetText} $LabelISOSelection "Step 3 PENDING: Browse to your $ISOFileName"    
+  ${NSD_SetText} $DownloadISO "$(RL_DL3)"
+  SetCtlColors $ISOFileTxt FF9B00 FFFFFF
+  ${NSD_SetText} $ISOFileTxt "$(BW_ISO_2)"
+  ${NSD_SetText} $LabelISOSelection "$(PEND_STEP3)"
   Call EnableNext  
   
  ${Else}
@@ -624,7 +624,7 @@ Function OnSelectDistro
   EnableWindow $DownloadISO 1
   EnableWindow $ISOSelection 1
   ${NSD_Uncheck} $DownloadISO  
-  ${NSD_SetText} $DownloadISO "Download Link"   
+  ${NSD_SetText} $DownloadISO "$(RL_DL4)"
  ${EndIf}  
  
  ${If} $DownLink == "NONE"

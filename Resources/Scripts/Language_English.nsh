@@ -65,7 +65,20 @@
         LangString MENU_LABEL_GRUB          ${RODRILANG} "GRUB Bootable ISOs"
         LangString MENU_LABEL_GRUB_LARGE    ${RODRILANG} "GRUB Bootable ISOs and Windows XP/7/8"
 
-        ;LangString LABEL           ${RODRILANG} ""
+        LangString MB_DL2                   ${RODRILANG} "Launch the Download Link?$\r$\nLet the download finish before moving to step 2."
+        LangString RL_DL2                   ${RODRILANG} "Download Link"
+        LangString RL2_STEP3                ${RODRILANG} "Step 3: Once your download has finished, Browse and select the ISO."
+        LangString BW2_STEP3                ${RODRILANG} "Step 3: Browse and Select your $ISOFileName"
+        LangString BW_ISO_1                 ${RODRILANG} "Browse to your $ISOFileName  -->"
+        LangString VTO_HOME1                ${RODRILANG} "Visit the $OfficialName Home Page"
+        LangString WE_SELECT1               ${RODRILANG} "We Found and Selected the $SomeFileExt."
+        LangString DONE_STEP3               ${RODRILANG} "Step 3 DONE: $ISOFileName Found and Selected!"
+        LangString RL_DL3                   ${RODRILANG} "Download Link"
+
+        LangString BW_ISO_2                 ${RODRILANG} "Browse to and select the $ISOFileName"
+        LangString PEND_STEP3               ${RODRILANG} "Step 3 PENDING: Browse to your $ISOFileName"
+        LangString RL_DL4                   ${RODRILANG} "Download Link"
+
 
 !undef RODRILANG
 
