@@ -160,7 +160,9 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
  ${SetISOFileNames} "XBMCbuntu" "xbmcbuntu*.iso" "http://mirrors.xbmc.org/releases/XBMCbuntu/" "NULL" "linux.cfg" "http://xbmc.org/" "XBMC"
  ${SetISOFileNames} "Xiaopan (Penetration Testing)" "Xiaopan*.iso" "http://sourceforge.net/projects/xiaopanos/files/latest/download" "NULL" "linux.cfg" "http://xiaopan.co" "Xiaopan"
  ${SetISOFileNames} "Zorin OS Core" "zorin*.iso" "http://zorin-os.com/free.html" "NULL" "linux.cfg" "http://zorin-os.com/" "Zorin OS"
- 
+ ${SetISOFileNames} "Cub Linux 32 bit"  "CubLinux*i386.iso"          "https://cublinux.com/download/" "NULL" "linux.cfg" "https://cublinux.com/" "Cub Linux"
+ ${SetISOFileNames} "Cub Linux 64 bit"  "CubLinux*amd64.iso"         "https://cublinux.com/download/" "NULL" "linux.cfg" "https://cublinux.com/" "Cub Linux"
+
      ${SetISOFileNames} "" "" "" "" "" "" ""
      ${SetISOFileNames} "--- Antivirus Tools ---" "" "" "" "" "" ""
      ${SetISOFileNames} "" "" "" "" "" "" ""

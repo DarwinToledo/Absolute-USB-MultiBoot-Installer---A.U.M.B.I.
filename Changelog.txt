@@ -1,4 +1,6 @@
-* RUBIB v1.0.1.*
+
+* AUMBI v1.0.1.*
+- Project Renamed to AUMBI (Absolute USB MultiBoot Installer)
 - New: Multilanguage support
 - Fixed: Licences from Yumi
 
