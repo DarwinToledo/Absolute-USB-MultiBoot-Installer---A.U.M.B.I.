@@ -10,7 +10,7 @@
            !define VERSION             "1.5.0.${BUILD_NUMBER}"
 
            #INST RESOURCES
-           !define MUI_ICON            "${NSISDIR}\Contrib\Graphics\Icons\box-install.ico"
+           !define MUI_ICON            "Resources\Images\Install.ico"
            !define RUBIB_WEBSITE       "http://usbwithlinux.darwintoledo.com/"
            !define RUBIB_LINK2         "http://usbwithlinux.darwintoledo.com/2016/06/rubib-rodri-universal-multiboot.html"
 

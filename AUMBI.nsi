@@ -34,6 +34,7 @@
          !include       LogicLib.nsh
          !include       "Macros.nsh"
          ;!include      TextFunc.nsh
+         !addplugindir  "Resources\Plugins"
 
          !include       "Resources\Scripts\Defines.nsh"
          !include       "Variables.nsh"
@@ -73,6 +74,7 @@
 #
 #===========================================================
          ; Interface settings
+         !define MUI_CUSTOMFUNCTION_GUIINIT AUMBIInit
          !define MUI_FINISHPAGE_NOAUTOCLOSE
          !define MUI_HEADERIMAGE
          !define MUI_HEADERIMAGE_BITMAP "Resources\Images\usb-logo-nsis.bmp"
@@ -1273,3 +1275,7 @@ FunctionEnd
   Function .onInstSuccess
            ExecShell "open" "${RUBIB_WEBSITE}"
   FunctionEnd
+  
+Function AUMBIInit
+  Aero::Apply
+FunctionEnd
