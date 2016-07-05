@@ -1,8 +1,8 @@
 =========================================================================
-©2016 Darwin Toledo http://rubib.darwintoledo.com
+©2016 Darwin Toledo http://usbwithlinux.darwintoledo.com
 
 =========================================================================
-RUBIB (Rodri Universal multiBoot Installer B)
+A.U.M.B.I. - Absolute USB MultiBoot Installer
 =========================================================================
 * New Project Based on YUMI (Your Universal Multiboot Installer)
 
