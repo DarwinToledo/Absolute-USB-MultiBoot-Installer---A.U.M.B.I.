@@ -55,18 +55,25 @@
 #===========================================================
 # 
 #===========================================================
+         Name "${NAME} ${VERSION}"
 
          !ifdef BUILD_BETA
-         Name "${NAME} ${VERSION}"
+         Caption "${NAME} ${VERSION} Beta - ${RUBIB_WEBSITE}"
          OutFile "C:\Users\${DESKTOP_USER}\Desktop\${FILENAME}-Beta-${VERSION}.exe"
+         BrandingText "${NAME} ${VERSION} Beta - ${RUBIB_WEBSITE}"
+         !endif
+         !ifdef BUILD_RC1
+         Caption "${NAME} ${VERSION} RC1 - ${RUBIB_WEBSITE}"
+         OutFile "C:\Users\${DESKTOP_USER}\Desktop\${FILENAME}-${VERSION}-RC1.exe"
+         BrandingText "${NAME} ${VERSION} RC1 - ${RUBIB_WEBSITE}"
          !endif
          !ifdef BUILD_STABLE
-         Name "${NAME} ${VERSION}"
+         Caption "${NAME} ${VERSION} - ${RUBIB_WEBSITE}"
          OutFile "C:\Users\${DESKTOP_USER}\Desktop\${FILENAME}-${VERSION}.exe"
+         BrandingText "${NAME} ${VERSION} - ${RUBIB_WEBSITE}"
          !endif
 
          ShowInstDetails show
-         BrandingText "${NAME} ${VERSION} - ${RUBIB_WEBSITE}"
          CompletedText "All Finished, Process is Complete!"
          InstallButtonText "$(Create_Button)"
 
