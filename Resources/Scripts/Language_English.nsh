@@ -40,11 +40,14 @@
         LangString BROW_AND_SELFORM         ${RODRILANG} "Browse to and select the $FileFormat"
         LangString RL1_STEP1                ${RODRILANG} "Step 1: ${NAME} Summoned $DestDisk as your USB Device"
         LangString SHOW_ALL_DRIVES          ${RODRILANG} "Show All Drives?"
+        LangString VIEW_OR_REMOVEDISTROS    ${RODRILANG} "View or Remove Installed Distros?"
+        LangString VIEW_OR_REMOVEDISTROS2   ${RODRILANG} "View or Remove Installed Distros?"
         LangString CLICK_TO_ONLINEHELP      ${RODRILANG} "Click HERE to visit the ${NAME} page for additional Help!"
 
         LangString RL2_STEP1                ${RODRILANG} "Step 1: Select the Drive Letter of your USB Device."
         LangString SHOW_ALL_DRIVES2         ${RODRILANG} "Show All Drives?"
         LangString RL2_FORMAT               ${RODRILANG} "Format $DestDisk Drive (Erase Content)?"
+        LangString RL2_FORMAT2              ${RODRILANG} "Format $DestDisk Drive (Erase Content)?"
         LangString SHOW_ALL_ISOS2           ${RODRILANG} "Show All ISOs?"
         LangString DOWNLOAD_ISOOP2          ${RODRILANG} "Download the ISO (Optional)."
         LangString RL_VISIST_OFHOME2        ${RODRILANG} "Visit the $OfficialName HomePage"
@@ -79,16 +82,24 @@
         LangString PEND_STEP3               ${RODRILANG} "Step 3 PENDING: Browse to your $ISOFileName"
         LangString RL_DL4                   ${RODRILANG} "Download Link"
 
+        LangString LOCAL_SOMEFILE_SEL       ${RODRILANG} "Local $SomeFileExt Selected."
+        LangString JUST_ISONAME_ALREDY      ${RODRILANG} "$JustISOName is already on $DestDisk$\r$\nPlease Remove it first!"
+        LangString STEP_2_SELADISTRIB       ${RODRILANG} "Step 2: Select a Distribution to put on $DestDisk"
+        LangString BUTTON_REMOVE_TEXT       ${RODRILANG} "Remove"
+        LangString YOURE_UNISTALLERMODE     ${RODRILANG} "You're in Uninstaller Mode!"
+        LangString STEP2_DESTINATIONDISK    ${RODRILANG} "Step 2: Select a Distribution to remove from $DestDisk"
+        LangString STEP3_SELECTISOFILEVAR   ${RODRILANG} "Step 3: Select your $ISOFileName"
+        LangString DISABLE_AFTER_STEP2      ${RODRILANG} "Disabled until step 2 is complete"
+        LangString BUTTON_CREATE_TEXT       ${RODRILANG} "Create"
+        LangString STEP2_SELECTADISTRO      ${RODRILANG} "Step 2: Select a Distribution to put on $DestDisk"
+
+        LangString STEP1_DESTUSBDEV         ${RODRILANG} "Step 1: You Selected $DestDisk as your USB Device"
+        LangString FORMATING_TEXTDISK       ${RODRILANG} "Formatting $DestDisk as Fat32 using Fat32format.exe"
+        LangString WEWILL_FAT32             ${RODRILANG} "We Will Fat32 Format $DestDisk Drive!"
+        LangString FORMAT_DESTDIST_DRIVE    ${RODRILANG} "Format $DestDisk Drive (Erase Content)?"
+        LangString S_SHOW_ALLISOS           ${RODRILANG} "Show All ISOs!"
+        LangString SS_SHOW_ALLISOS          ${RODRILANG} "Show All ISOs?"
+
+        LangString STEP_2_REMOVEFROMLIST    ${RODRILANG} "Step 2: Select a Distribution from the list to remove from $DestDisk"
 
 !undef RODRILANG
-
-
-
-
-
-
-
-
-
-
-

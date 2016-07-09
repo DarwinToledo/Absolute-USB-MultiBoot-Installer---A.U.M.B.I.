@@ -231,7 +231,7 @@ Function SelectionsPage
   ${NSD_OnClick} $AllDriveOption ListAllDrives   
   
 ; Format Drive Option
-  ${NSD_CreateCheckBox} 60% 23 100% 15 "Format $DestDisk Drive (Erase Content)?"
+  ${NSD_CreateCheckBox} 60% 23 100% 15 "$(RL2_FORMAT2)"
   Pop $Format
   ${NSD_OnClick} $Format FormatIt     
  
@@ -258,7 +258,7 @@ Function SelectionsPage
  ${Else}
   
 ; To Install or Uninstall? That is the question!  
-  ${NSD_CreateCheckBox} 60% 0 44% 15 "View or Remove Installed Distros?"
+  ${NSD_CreateCheckBox} 60% 0 44% 15 "$(VIEW_OR_REMOVEDISTROS)"
   Pop $Uninstaller
   ${NSD_OnClick} $Uninstaller Uninstall  
   
@@ -651,7 +651,7 @@ Function ISOBrowse
  ${NSD_SetText} $ISOFileTxt $TheISO
  SetCtlColors $ISOFileTxt 009900 FFFFFF
  EnableWindow $DownloadISO 0
- ${NSD_SetText} $DownloadISO "Local $SomeFileExt Selected." 
+ ${NSD_SetText} $DownloadISO "$(LOCAL_SOMEFILE_SEL)"
  StrCpy $ISOTest "$TheISO" ; Populate ISOTest so we can enable Next 
  StrCpy $ISOFile "$TheISO" 
  ${GetFileName} "$TheISO" $JustISO
@@ -669,7 +669,7 @@ Function ISOBrowse
  ${If} ${FileExists} "$BootDir\multiboot\$JustISOName\*.*"
  ${AndIf} $JustISOName != ""
  ${AndIf} $FormatMe != "Yes"
- MessageBox MB_OK "$JustISOName is already on $DestDisk$\r$\nPlease Remove it first!"
+ MessageBox MB_OK "$(JUST_ISONAME_ALREDY)"
  ${Else}
  ${EndIf}
  Call EnableNext
@@ -688,7 +688,7 @@ Function InstallorRemove ; Populate DistroName based on Install/Removal option
   ${If} $Removal == "Yes" 
   Call RemovalList
   ${Else}
-   ${NSD_SetText} $LinuxDistroSelection "Step 2: Select a Distribution to put on $DestDisk" 
+   ${NSD_SetText} $LinuxDistroSelection "$(STEP_2_SELADISTRIB)"
   Call SetISOFileName
   ${EndIf}
 FunctionEnd  
@@ -714,10 +714,10 @@ Function Uninstall
   ShowWindow $DistroLink 0
   ShowWindow $DownloadISO 0
    GetDlgItem $6 $HWNDPARENT 1 ; Get "Install" control handle
-	SendMessage $6 ${WM_SETTEXT} 0 "STR:Remove"
+	SendMessage $6 ${WM_SETTEXT} 0 "STR:$(BUTTON_REMOVE_TEXT)"
 	EnableWindow $6 0 ; Disable "Install" control button
-  ${NSD_SetText} $Uninstaller "You're in Uninstaller Mode!"
-   ${NSD_SetText} $LinuxDistroSelection "Step 2: Select a Distribution to remove from $DestDisk"  
+  ${NSD_SetText} $Uninstaller "$(YOURE_UNISTALLERMODE)"
+   ${NSD_SetText} $LinuxDistroSelection "$(STEP2_DESTINATIONDISK)"
     SendMessage $Distro ${CB_RESETCONTENT} 0 0 ; was ${NSD_LB_Clear} $Distro "" ; Clear all distro entries because a new option may have been chosen ; Enable for DropBox
      StrCpy $Checker "Yes"   
 	 Call RemovalList
@@ -728,15 +728,15 @@ Function Uninstall
     ShowWindow $ISOFileTxt 1
 	ShowWindow $ISOSelection 0
 	Call ClearAll
-    ${NSD_SetText} $LabelISOSelection "Step 3: Select your $ISOFileName"
-	${NSD_SetText} $ISOFileTxt "Disabled until step 2 is complete"
+    ${NSD_SetText} $LabelISOSelection "$(STEP3_SELECTISOFILEVAR)"
+	${NSD_SetText} $ISOFileTxt "$(DISABLE_AFTER_STEP2)"
      GetDlgItem $6 $HWNDPARENT 1 ; Get "Install" control handle
-	  SendMessage $6 ${WM_SETTEXT} 0 "STR:Create"
+	  SendMessage $6 ${WM_SETTEXT} 0 "STR:$(BUTTON_CREATE_TEXT)"
 	  EnableWindow $6 0 ; Disable "Install" control button
   ${NSD_Uncheck} $Uninstaller  
   StrCpy $Removal "No"  
-  ${NSD_SetText} $Uninstaller "View or Remove Installed Distros?" 
-   ${NSD_SetText} $LinuxDistroSelection "Step 2: Select a Distribution to put on $DestDisk" 
+  ${NSD_SetText} $Uninstaller "$(VIEW_OR_REMOVEDISTROS2)"
+   ${NSD_SetText} $LinuxDistroSelection "$(STEP2_SELECTADISTRO)"
      SendMessage $Distro ${CB_RESETCONTENT} 0 0  ; was ${NSD_LB_Clear} $Distro "" ; Clear all distro entries because a new option may have been chosen ; Enable for DropBox
      StrCpy $Checker "Yes"         
      Call SetISOFileName
@@ -759,7 +759,7 @@ Function OnSelectDrive
   Call FormatIt  
   Call EnableNext
  
-  ${NSD_SetText} $LabelDrivePage "Step 1: You Selected $DestDisk as your USB Device"   
+  ${NSD_SetText} $LabelDrivePage "$(STEP1_DESTUSBDEV)"
   
 ;  ${If} ${FileExists} $BootDir\menu.lst
 ;  ${AndIf} ${FileExists} $BootDir\syslinux.cfg
@@ -812,7 +812,7 @@ Function FormatYes ; If Format is checked, do something
   SetShellVarContext all
   InitPluginsDir
   File /oname=$PLUGINSDIR\fat32format.exe "fat32format.exe"  
-  DetailPrint "Formatting $DestDisk as Fat32 using Fat32format.exe"
+  DetailPrint "$(FORMATING_TEXTDISK)"
   nsExec::ExecToLog '"cmd" /c "echo y|$PLUGINSDIR\fat32format $DestDisk"' ;/Q /y
   ;nsExec::ExecToLog '"cmd" /c "echo y|$PLUGINSDIR\fat32format -c$BlockSize $DestDisk"' ;/Q /y
   ${EndIf} 
@@ -823,14 +823,14 @@ Function FormatIt ; Set Format Option
   ${If} $FormatMe == ${BST_CHECKED}
   ${NSD_Check} $Format
     StrCpy $FormatMe "Yes"
-  ${NSD_SetText} $Format "We Will Fat32 Format $DestDisk Drive!"
+  ${NSD_SetText} $Format "$(WEWILL_FAT32)"
     SendMessage $Distro ${CB_RESETCONTENT} 0 0 ; was ${NSD_LB_Clear} $Distro "" ; Clear all distro entries because a new format option may have been chosen ; Enable for DropBox
 	ShowWindow $Uninstaller 0 ; Disable Uninstaller option because we will be formatting the drive.
     StrCpy $Checker "Yes"	
   
   ${ElseIf} $FormatMe == ${BST_UNCHECKED}
   ${NSD_Uncheck} $Format 
-  ${NSD_SetText} $Format "Format $DestDisk Drive (Erase Content)?"  
+  ${NSD_SetText} $Format "$(FORMAT_DESTDIST_DRIVE)"
     SendMessage $Distro ${CB_RESETCONTENT} 0 0 ; was ${NSD_LB_Clear} $Distro "" ; Clear all distro entries because a new format option may have been chosen ; Enable for DropBox
     ShowWindow $Uninstaller 1 ; Re-enable Uninstaller option.
 	StrCpy $Checker "Yes" 
@@ -844,12 +844,12 @@ Function ShowAllISOs ; Set Show All ISOs Option
   ${If} $ShowingAll == ${BST_CHECKED}
   ${NSD_Check} $ForceShowAll
   StrCpy $ShowingAll "Yes"
-  ${NSD_SetText} $ForceShowAll "Show All ISOs!"
+  ${NSD_SetText} $ForceShowAll "$(S_SHOW_ALLISOS)"
     SendMessage $ISOSelection ${CB_RESETCONTENT} 0 0 
  
   ${ElseIf} $ShowingAll == ${BST_UNCHECKED}
   ${NSD_Uncheck} $ForceShowAll
-  ${NSD_SetText} $ForceShowAll "Show All ISOs?"  
+  ${NSD_SetText} $ForceShowAll "$(SS_SHOW_ALLISOS)"
     SendMessage $ISOSelection ${CB_RESETCONTENT} 0 0 
   ${EndIf}  
 FunctionEnd

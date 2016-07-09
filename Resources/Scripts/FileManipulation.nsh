@@ -182,7 +182,7 @@ FunctionEnd
 !define Trim "!insertmacro Trim" 
 
 Function RemovalList ; Lists the distros installed on the select drive.
- ${NSD_SetText} $LinuxDistroSelection "Step 2: Select a Distribution from the list to remove from $DestDisk"  
+ ${NSD_SetText} $LinuxDistroSelection "$(STEP_2_REMOVEFROMLIST)"
  ${If} ${FileExists} "$BootDir\multiboot\Installed.txt" ; Are there distributions on the select drive? 
  ClearErrors
  FileOpen $0 $BootDir\multiboot\Installed.txt r
