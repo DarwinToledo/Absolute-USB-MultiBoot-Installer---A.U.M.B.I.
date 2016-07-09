@@ -1,11 +1,11 @@
-AUMBI (Absolute USB MultiBoot Installer) Â©Copyleft 2016 Darwin Toledo "http://rubib.darwintoledo.com"
+AUMBI (Absolute USB MultiBoot Installer) ©Copyleft 2016 Darwin Toledo "http://usbwithlinux.darwintoledo.com"
 This Open Source tool is covered under GNU General Public License Version 2
 Source Code is made available at time of download from the official RUBIB page:
-http://rubib.darwintoledo.com/2016/06/rubib-rodri-universal-multiboot.html
+http://usbwithlinux.darwintoledo.com/2016/06/rubib-rodri-universal-multiboot.html
 
 -------------------------------------------------------------------------------------------------
 
-YUMI (Your Universal Multiboot Installer) Â©2011-2016 Lance www.pendrivelinux.com
+YUMI (Your Universal Multiboot Installer) ©2011-2016 Lance www.pendrivelinux.com
 This Open Source tool is covered under GNU General Public License Version 2
 Source Code is made available at time of download from the official YUMI page:
 http://www.pendrivelinux.com/yumi-multiboot-usb-creator/
@@ -27,13 +27,13 @@ for any damages that could potentially arise from it's use or misuse.
 
 Third Party Unmodified Tools Used:
 
-Built using NSIS Installer Â© Contributors http://nsis.sourceforge.net
+Built using NSIS Installer © Contributors http://nsis.sourceforge.net
 
-Syslinux Â© H. Peter Anvin http://syslinux.zytor.com 
-GRUB4DOS Â© the Gna! people + Chenall https://code.google.com/p/grub4dos-chenall/
-7-Zip is Â© Igor Pavlovis www.7-zip.org  
-Fat32format.exe Â© Tom Thornhill Ridgecorp Consultants http://www.ridgecrop.demon.co.uk
-Firadisk.img Â© Panot Joonkhiaw Karyonix http://reboot.pro/8804/
+Syslinux © H. Peter Anvin http://syslinux.zytor.com 
+GRUB4DOS © the Gna! people + Chenall https://code.google.com/p/grub4dos-chenall/
+7-Zip is © Igor Pavlovis www.7-zip.org  
+Fat32format.exe © Tom Thornhill Ridgecorp Consultants http://www.ridgecrop.demon.co.uk
+Firadisk.img © Panot Joonkhiaw Karyonix http://reboot.pro/8804/
 
 YUMI, Grub, Fat32format, Syslinux covered under GNU GPL version 2
 7-zip is covered under an LGPL + AES License - see the License following GNU GPL 2
