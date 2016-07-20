@@ -1,6 +1,6 @@
 #===========================================================
 # AUMBI (Absolute USB MultiBoot Installer)
-# Developed by Darwin Toledo http://www.darwintoledo.com
+# Developed by Darwin Toledo http://www.usbwithlinux.com/
 # Based on YUMI
 #===========================================================
 ; AUMBI Copyleft ©2016 Darwin Toledo http://www.darwintoledo.com (See YUMI-Copying.txt and AUMBI-Readme.txt for more information, Credits, and Licensing)
