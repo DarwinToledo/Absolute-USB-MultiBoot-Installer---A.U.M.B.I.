@@ -1,11 +1,8 @@
 =========================================================================
-©2016 Darwin Toledo http://www.usbwithlinux.com/
-
-=========================================================================
 A.U.M.B.I. - Absolute USB MultiBoot Installer
 =========================================================================
-* New Project Based on YUMI (Your Universal Multiboot Installer)
 
+©2016 Darwin Toledo http://www.usbwithlinux.com/
 
 =========================================================================
 LICENSE
