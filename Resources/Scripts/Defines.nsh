@@ -11,6 +11,6 @@
 
            #INST RESOURCES
            !define MUI_ICON            "Resources\Images\Install.ico"
-           !define RUBIB_WEBSITE       "http://usbwithlinux.darwintoledo.com"
-           !define RUBIB_LINK2         "http://usbwithlinux.darwintoledo.com/2016/06/rubib-rodri-universal-multiboot.html"
+           !define RUBIB_WEBSITE       "http://www.usbwithlinux.com"
+           !define RUBIB_LINK2         "http://www.usbwithlinux.com/2016/07/aumbi-20.html"
 
