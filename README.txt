@@ -1,5 +1,5 @@
 =========================================================================
-©2016 Darwin Toledo http://usbwithlinux.darwintoledo.com
+©2016 Darwin Toledo http://www.usbwithlinux.com/
 
 =========================================================================
 A.U.M.B.I. - Absolute USB MultiBoot Installer

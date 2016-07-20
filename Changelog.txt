@@ -1,12 +1,14 @@
-
-* AUMBI v1.0.1.*
-- Project Renamed to AUMBI (Absolute USB MultiBoot Installer)
-- New: Multilanguage support
-- Fixed: Licences from Yumi
+* AUMBI v2.0.0.200
+- Fixed: Licences from Yumi.
+- New: Project Renamed to AUMBI (Absolute USB MultiBoot Installer).
+- New: Multilanguage support.
+- New: Added Spanish Language.
+- New: Domain of website www.usbwithlinux.com
+- Update: Boot Image, Wizard Images.
 
 
 * RUBIB v1.0.0.88
-
 - initial release
 - Ubuntu, and debian links updated
 - Various changes in the source code
+- Compression method Solid LZMA

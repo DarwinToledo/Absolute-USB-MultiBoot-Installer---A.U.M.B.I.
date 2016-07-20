@@ -1,7 +1,7 @@
-AUMBI (Absolute USB MultiBoot Installer) ©Copyleft 2016 Darwin Toledo "http://usbwithlinux.darwintoledo.com"
+AUMBI (Absolute USB MultiBoot Installer) ©Copyleft 2016 Darwin Toledo "http://www.usbwithlinux.com/"
 This Open Source tool is covered under GNU General Public License Version 2
 Source Code is made available at time of download from the official RUBIB page:
-http://usbwithlinux.darwintoledo.com/2016/06/rubib-rodri-universal-multiboot.html
+http://www.usbwithlinux.com/2016/07/aumbi-20.html
 
 -------------------------------------------------------------------------------------------------
 
