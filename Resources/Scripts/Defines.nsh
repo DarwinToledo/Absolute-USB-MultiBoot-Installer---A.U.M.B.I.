@@ -7,7 +7,7 @@
            !define NAME                "AUMBI"
            !define FILENAME            "AUMBI"
            !define DESKTOP_USER        "Rodrigo"
-           !define VERSION             "2.0.0.${BUILD_NUMBER}"
+           !define VERSION             "2.0.1.${BUILD_NUMBER}"
 
            #INST RESOURCES
            !define MUI_ICON            "Resources\Images\Install.ico"
