@@ -47,7 +47,7 @@
 
          VIProductVersion "${VERSION}"
          VIAddVersionKey CompanyName "${RUBIB_WEBSITE}"
-         VIAddVersionKey LegalCopyright "Copyleft ©2016 Darwin Toledo www.darwintoledo.com"
+         VIAddVersionKey LegalCopyright "Copyleft ©2016 Darwin Toledo www.usbwithlinux.com"
          VIAddVersionKey FileVersion "${VERSION}"
          VIAddVersionKey FileDescription "Automated Universal MultiBoot UFD Creation Tool"
          VIAddVersionKey License "GPL Version 2"
@@ -88,7 +88,7 @@
          !define MUI_LICENSEPAGE_TEXT_TOP $(License_Text_Top)
          !define MUI_LICENSEPAGE_TEXT_BOTTOM $(License_Text_Bottom)
          !define MUI_PAGE_CUSTOMFUNCTION_PRE License_PreFunction
-         !insertmacro MUI_PAGE_LICENSE "GNU GPL.txt"
+         !insertmacro MUI_PAGE_LICENSE "AUMBI.rtf"
 
          ; Distro Selection Page
          Page custom SelectionsPage
@@ -438,7 +438,7 @@ Function EnableNext ; Enable Install Button
 	  ${AndIf} $ISOTest != ""
   StrCpy $InUnStall "Install"	  
   GetDlgItem $6 $HWNDPARENT 1 ; Get "Install" control handle
-   SendMessage $6 ${WM_SETTEXT} 0 "STR:Create"
+   SendMessage $6 ${WM_SETTEXT} 0 "STR:$(Create_Button)"
     EnableWindow $6 1 ; Enable "Install" control button
 
   ${ElseIf} $Removal == "Yes"

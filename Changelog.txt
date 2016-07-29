@@ -1,3 +1,15 @@
+*AUMBI 2.0.1.*
+- Fixed: Ubuntu Download Links (16.04.1)
+- Fixed: Kubuntu Download Links (16.04.1)
+- Fixed: Lubuntu Download Links (16.04.1)
+- Fixed: Xubuntu Download Links (16.04.1) 
+- Fixed: Ubuntu Gnome Download Links (16.04.1) 
+- Fixed: Ubuntu Mate Download Links (16.04.1) 
+- Fixed: Ubuntu Studio Download Links (16.04.1) 
+- Fixed: Linux Mint Cinnamon Download Links (18 Sarah) 
+- Fixed: Linux Mint Mate Download Links (18 Sarah) 
+- Fixed: Spanish Language.
+
 * AUMBI v2.0.0.200
 - Fixed: Licences from Yumi.
 - New: Project Renamed to AUMBI (Absolute USB MultiBoot Installer).

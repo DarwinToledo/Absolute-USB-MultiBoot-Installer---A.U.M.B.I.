@@ -4,29 +4,31 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
      ${SetISOFileNames} "--- Ubuntu 32/64 Bit ---" "" "" "" "" "" ""
 	 ${SetISOFileNames} "" "" "" "" "" "" ""
 	 
- ${SetISOFileNames} "Ubuntu 32/64 bit"      "ubuntu*desktop*.iso"            "http://www.ubuntu.com/download/desktop" "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
+ ${SetISOFileNames} "Ubuntu 32 bit"      "ubuntu*desktop*i386.iso"            "http://releases.ubuntu.com/16.04.1/ubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
+ ${SetISOFileNames} "Ubuntu 64 bit"      "ubuntu*desktop*amd64.iso"            "http://releases.ubuntu.com/16.04.1/ubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
 
- ${SetISOFileNames} "Kubuntu 32/64 bit"     "kubuntu*desktop*.iso"           "http://kubuntu.org/getkubuntu/" "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
+ ${SetISOFileNames} "Kubuntu 32 bit"     "kubuntu*desktop*i386.iso"           "http://cdimage.ubuntu.com/kubuntu/releases/16.04.1/release/kubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
+ ${SetISOFileNames} "Kubuntu 64 bit"     "kubuntu*desktop*amd64.iso"           "http://cdimage.ubuntu.com/kubuntu/releases/16.04.1/release/kubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
 
- ${SetISOFileNames} "Lubuntu 32 bit"        "lubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04-desktop-i386.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
- ${SetISOFileNames} "Lubuntu 64 bit"        "lubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04-desktop-amd64.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
- ;${SetISOFileNames} "Lubuntu PowerPC"       "lubuntu*desktop*powerpc.iso"    "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04-desktop-powerpc.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
+ ${SetISOFileNames} "Lubuntu 32 bit"        "lubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
+ ${SetISOFileNames} "Lubuntu 64 bit"        "lubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
+ ;${SetISOFileNames} "Lubuntu PowerPC"       "lubuntu*desktop*powerpc.iso"    "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04.1-desktop-powerpc.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
 
- ${SetISOFileNames} "Xubuntu 32 bit"        "xubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04-desktop-i386.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
- ${SetISOFileNames} "Xubuntu 64 bit"        "xubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04-desktop-amd64.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
+ ${SetISOFileNames} "Xubuntu 32 bit"        "xubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
+ ${SetISOFileNames} "Xubuntu 64 bit"        "xubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
 
- ${SetISOFileNames} "Ubuntu Gnome 32 bit"   "ubuntu-gnome*desktop*i386.iso"  "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04-desktop-i386.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
- ${SetISOFileNames} "Ubuntu Gnome 64 bit"   "ubuntu-gnome*desktop*amd64.iso" "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04-desktop-amd64.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
+ ${SetISOFileNames} "Ubuntu Gnome 32 bit"   "ubuntu-gnome*desktop*i386.iso"  "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
+ ${SetISOFileNames} "Ubuntu Gnome 64 bit"   "ubuntu-gnome*desktop*amd64.iso" "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
 
- ${SetISOFileNames} "Ubuntu Mate 32 bit"    "ubuntu-mate*desktop*i386.iso"   "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04-desktop-i386.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
- ${SetISOFileNames} "Ubuntu Mate 64 bit"    "ubuntu-mate*desktop*amd64.iso"  "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04-desktop-amd64.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
- ;${SetISOFileNames} "Ubuntu PowerPC"        "ubuntu-mate*desktop*powerpc.iso"  "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04-desktop-powerpc.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
+ ${SetISOFileNames} "Ubuntu Mate 32 bit"    "ubuntu-mate*desktop*i386.iso"   "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
+ ${SetISOFileNames} "Ubuntu Mate 64 bit"    "ubuntu-mate*desktop*amd64.iso"  "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
+ ;${SetISOFileNames} "Ubuntu PowerPC"        "ubuntu-mate*desktop*powerpc.iso"  "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04.1-desktop-powerpc.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
 
- ${SetISOFileNames} "Ubuntu Server 32 bit"  "ubuntu*server*i386.iso"         "http://releases.ubuntu.com/16.04/ubuntu-16.04-server-i386.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
- ${SetISOFileNames} "Ubuntu Server 64 bit"  "ubuntu*server*amd64.iso"        "http://releases.ubuntu.com/16.04/ubuntu-16.04-server-amd64.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
+ ${SetISOFileNames} "Ubuntu Server 32 bit"  "ubuntu*server*i386.iso"         "http://releases.ubuntu.com/16.04/ubuntu-16.04.1-server-i386.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
+ ${SetISOFileNames} "Ubuntu Server 64 bit"  "ubuntu*server*amd64.iso"        "http://releases.ubuntu.com/16.04/ubuntu-16.04.1-server-amd64.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
 
- ${SetISOFileNames} "Ubuntu Studio 32 bit"  "ubuntustudio*i386.iso"          "http://cdimage.ubuntu.com/ubuntustudio/releases/16.04/release/ubuntustudio-16.04-dvd-i386.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
- ${SetISOFileNames} "Ubuntu Studio 64 bit"  "ubuntustudio*amd64.iso"         "http://cdimage.ubuntu.com/ubuntustudio/releases/16.04/release/ubuntustudio-16.04-dvd-amd64.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
+ ${SetISOFileNames} "Ubuntu Studio 32 bit"  "ubuntustudio*i386.iso"          "http://cdimage.ubuntu.com/ubuntustudio/releases/16.04/release/ubuntustudio-16.04.1-dvd-i386.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
+ ${SetISOFileNames} "Ubuntu Studio 64 bit"  "ubuntustudio*amd64.iso"         "http://cdimage.ubuntu.com/ubuntustudio/releases/16.04/release/ubuntustudio-16.04.1-dvd-amd64.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
 
  ${SetISOFileNames} "Edubuntu 32 bit"       "edubuntu*i386.iso"              "http://cdimage.ubuntu.com/edubuntu/releases/trusty/release/edubuntu-14.04.4-dvd-i386.iso" "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
  ${SetISOFileNames} "Edubuntu 64 bit"       "edubuntu*amd64.iso"             "http://cdimage.ubuntu.com/edubuntu/releases/trusty/release/edubuntu-14.04.4-dvd-amd64.iso" "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
@@ -37,7 +39,11 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
      ${SetISOFileNames} "--- Linux Mint 32/64 Bit ---" "" "" "" "" "" ""
 	 ${SetISOFileNames} "" "" "" "" "" "" ""
    
- ${SetISOFileNames} "Linux Mint" "linuxmint*.iso" "http://www.linuxmint.com/download.php" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Cinnamon 32bit" "linuxmint*cinnamon-64bit.iso" "https://www.linuxmint.com/edition.php?id=219" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Cinnamon 64bit" "linuxmint*cinnamon-32bit.iso" "https://www.linuxmint.com/edition.php?id=220" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Mate 32bit" "linuxmint*mate-32bit.iso" "https://www.linuxmint.com/edition.php?id=218" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Mate 64bit" "linuxmint*mate-64bit.iso" "https://www.linuxmint.com/edition.php?id=217" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Other" "linuxmint*.iso" "http://www.linuxmint.com/download.php" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
 
      ${SetISOFileNames} "" "" "" "" "" "" ""
      ${SetISOFileNames} "--- Debian Live 32/64 Bit ---" "" "" "" "" "" ""

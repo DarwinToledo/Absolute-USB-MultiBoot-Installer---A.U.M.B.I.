@@ -15,7 +15,7 @@
         LangString Distro_Text              ${RODRILANG} "Paso 2: Seleccione una distribución de la lista."
         LangString IsoPage_Text             ${RODRILANG} "Paso 3: Seleccionar $FileFormat (el nombre debe ser similar al anterior)."
         LangString IsoPage_Title            ${RODRILANG} "Seleccione su $FileFormat"
-        LangString Casper_Text              ${RODRILANG} "Paso 4: Establecer tamaño de archivo persistente para cambios almacenamiento (opcional)."
+        LangString Casper_Text              ${RODRILANG} "Paso 4: Establecer el tamaño del archivo persistente (opcional)."
         LangString IsoFile                  ${RODRILANG} "$FileFormat file|$ISOFileName" ;$ISOFileName variable previously *.iso
         LangString Extract                  ${RODRILANG} "Extrayendo el $FileFormat: The progress bar will not move until finished. Please be patient..."
         LangString CreateSysConfig          ${RODRILANG} "Creando archivo de configuración para $DestDisk"
@@ -82,7 +82,7 @@
         LangString PEND_STEP3               ${RODRILANG} "Paso 3 PENDIENTE: Examine para $ISOFileName"
         LangString RL_DL4                   ${RODRILANG} "Enlace de Descarga"
 
-        LangString LOCAL_SOMEFILE_SEL       ${RODRILANG} "Local $SomeFileExt Selected."
+        LangString LOCAL_SOMEFILE_SEL       ${RODRILANG} "Seleccionado $SomeFileExt Local."
         LangString JUST_ISONAME_ALREDY      ${RODRILANG} "$JustISOName is already on $DestDisk$\r$\nPlease Remove it first!"
         LangString STEP_2_SELADISTRIB       ${RODRILANG} "Paso 2: Seleccione una distribución para $DestDisk"
         LangString BUTTON_REMOVE_TEXT       ${RODRILANG} "Quitar"

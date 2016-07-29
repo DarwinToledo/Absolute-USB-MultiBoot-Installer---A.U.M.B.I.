@@ -12,5 +12,5 @@
            #INST RESOURCES
            !define MUI_ICON            "Resources\Images\Install.ico"
            !define RUBIB_WEBSITE       "http://www.usbwithlinux.com"
-           !define RUBIB_LINK2         "http://www.usbwithlinux.com/2016/07/aumbi-20.html"
+           !define RUBIB_LINK2         "http://www.usbwithlinux.com/p/user-guide.html"
 
