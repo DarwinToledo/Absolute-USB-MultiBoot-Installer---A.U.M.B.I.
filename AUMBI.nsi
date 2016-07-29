@@ -57,16 +57,16 @@
 #===========================================================
          Name "${NAME} ${VERSION}"
 
-         !ifdef BUILD_BETA
-         Caption "${NAME} ${VERSION} Beta - ${RUBIB_WEBSITE}"
-         OutFile "C:\Users\${DESKTOP_USER}\Desktop\${FILENAME}-Beta.exe"
-         BrandingText "${NAME} Beta - ${RUBIB_WEBSITE}"
-         !endif
          !ifdef BUILD_STABLE
          Caption "${NAME} ${VERSION} - ${RUBIB_WEBSITE}"
          OutFile "C:\Users\${DESKTOP_USER}\Desktop\${FILENAME}-${VERSION}.exe"
          BrandingText "${NAME} - ${RUBIB_WEBSITE}"
+         !else
+         Caption "${NAME} ${VERSION} Beta - ${RUBIB_WEBSITE}"
+         OutFile "C:\Users\${DESKTOP_USER}\Desktop\${FILENAME}-Beta.exe"
+         BrandingText "${NAME} Beta - ${RUBIB_WEBSITE}"
          !endif
+
 
          ShowInstDetails show
          CompletedText "All Finished, Process is Complete!"
@@ -1039,8 +1039,8 @@ Function DoSyslinux ; Install Syslinux on USB
   ${IfNot} ${FileExists} $BootDir\multiboot\libutil.c32 ; Old Syslinux files need to be replaced
   DetailPrint "Adding required files to the $BootDir\multiboot directory..." 
   CopyFiles "$PLUGINSDIR\AUMBI.png" "$BootDir\multiboot\AUMBI.png"
-  CopyFiles "$PLUGINSDIR\YUMI-Copying.txt" "$BootDir\multiboot\YUMI-Copying.txt" 
-  CopyFiles "$PLUGINSDIR\YUMI-Readme.txt" "$BootDir\multiboot\YUMI-Readme.txt" 
+  CopyFiles "$PLUGINSDIR\YUMI-Copying.txt" "$BootDir\multiboot\AUMBI.rtf"
+  CopyFiles "$PLUGINSDIR\YUMI-Readme.txt" "$BootDir\multiboot\Changelog.txt"
   CopyFiles "$PLUGINSDIR\license.txt" "$BootDir\multiboot\license.txt"   
   CopyFiles "$PLUGINSDIR\vesamenu.c32" "$BootDir\multiboot\vesamenu.c32"
   CopyFiles "$PLUGINSDIR\menu.c32" "$BootDir\multiboot\menu.c32"  
@@ -1251,6 +1251,8 @@ StrCpy $R9 0 ; we start on page 0
   ${FILEONAMELANG2} unlisted.cfg
 
   ${FILEONAME} AUMBI.png
+  ${FILEONAME} AUMBI.rtf
+  ${FILEONAME} Changelog.txt
   ${FILEONAME} AUMBI-Copying.txt
   ${FILEONAME} README.txt
   ${FILEONAME} license.txt
