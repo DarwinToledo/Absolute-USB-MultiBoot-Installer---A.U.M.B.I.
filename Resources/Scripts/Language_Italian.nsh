@@ -5,6 +5,7 @@
 
 !define RODRILANG ${LANG_ENGLISH}
 
+        LangString COMPLETED_TEXT           ${RODRILANG} "All Finished, Process is Complete!"
 
         LangString License_Subtitle         ${RODRILANG} "Si prega di rivedere i termini della licenza prima di procedere"
         LangString License_Text_Top         ${RODRILANG} "Il software nell'ambito del presente programma rientra con le seguenti licenze."

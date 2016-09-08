@@ -1,3 +1,7 @@
+#===========================================================
+#SET ISO FILENAMES HEADER
+#===========================================================
+
 !define SetISOFileNames "!insertmacro SetISOFileNames"
 Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO File name before extraction), Download2Get (Download Link), Path2Name (Final destination/Name of File), GimmeSize (Size of the File), Config2Use (Config File to Write To), File2Check (file to check for before adding Menu entry), Homepage, OfficialName
  
@@ -12,7 +16,6 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
 
  ${SetISOFileNames} "Lubuntu 32 bit"        "lubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
  ${SetISOFileNames} "Lubuntu 64 bit"        "lubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
- ;${SetISOFileNames} "Lubuntu PowerPC"       "lubuntu*desktop*powerpc.iso"    "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04.1-desktop-powerpc.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
 
  ${SetISOFileNames} "Xubuntu 32 bit"        "xubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
  ${SetISOFileNames} "Xubuntu 64 bit"        "xubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
@@ -22,7 +25,6 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
 
  ${SetISOFileNames} "Ubuntu Mate 32 bit"    "ubuntu-mate*desktop*i386.iso"   "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
  ${SetISOFileNames} "Ubuntu Mate 64 bit"    "ubuntu-mate*desktop*amd64.iso"  "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
- ;${SetISOFileNames} "Ubuntu PowerPC"        "ubuntu-mate*desktop*powerpc.iso"  "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04.1-desktop-powerpc.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
 
  ${SetISOFileNames} "Ubuntu Server 32 bit"  "ubuntu*server*i386.iso"         "http://releases.ubuntu.com/16.04/ubuntu-16.04.1-server-i386.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
  ${SetISOFileNames} "Ubuntu Server 64 bit"  "ubuntu*server*amd64.iso"        "http://releases.ubuntu.com/16.04/ubuntu-16.04.1-server-amd64.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
@@ -41,9 +43,14 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
    
  ${SetISOFileNames} "Linux Mint Cinnamon 32bit" "linuxmint*cinnamon-64bit.iso" "https://www.linuxmint.com/edition.php?id=219" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
  ${SetISOFileNames} "Linux Mint Cinnamon 64bit" "linuxmint*cinnamon-32bit.iso" "https://www.linuxmint.com/edition.php?id=220" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+
  ${SetISOFileNames} "Linux Mint Mate 32bit" "linuxmint*mate-32bit.iso" "https://www.linuxmint.com/edition.php?id=218" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
  ${SetISOFileNames} "Linux Mint Mate 64bit" "linuxmint*mate-64bit.iso" "https://www.linuxmint.com/edition.php?id=217" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
- ${SetISOFileNames} "Linux Mint Other" "linuxmint*.iso" "http://www.linuxmint.com/download.php" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+
+ ${SetISOFileNames} "Linux Mint XFCE 32bit" "linuxmint*xfce-32bit.iso" "https://www.linuxmint.com/edition.php?id=218" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint XFCE 64bit" "linuxmint*xfce-64bit.iso" "https://www.linuxmint.com/edition.php?id=217" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+
+ ${SetISOFileNames} "Linux Mint Other/Any" "linuxmint*.iso" "http://www.linuxmint.com/download.php" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
 
      ${SetISOFileNames} "" "" "" "" "" "" ""
      ${SetISOFileNames} "--- Debian Live 32/64 Bit ---" "" "" "" "" "" ""
@@ -69,6 +76,8 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
 
  ${SetISOFileNames} "Debian Live XFCE 32bit" "debian-live*i386-xfce-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/debian-live-8.5.0-i386-xfce-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
  ${SetISOFileNames} "Debian Live XFCE 64bit" "debian-live*amd64-xfce-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-8.5.0-amd64-xfce-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
+
+ ${SetISOFileNames} "Debian Live Other/Any" "debian-live*amd64-xfce-desktop.iso" "https://www.debian.org/devel/debian-live/" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
 
      ${SetISOFileNames} "" "" "" "" "" "" ""
      ${SetISOFileNames} "--- Fedora 32/64 Bit ---" "" "" "" "" "" ""

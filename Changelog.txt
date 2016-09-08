@@ -1,3 +1,8 @@
+*AUMBI 2.0.2.*
+- Added: Linux Mint 18 XFCE Links
+- Added: ISO Selection Option for any Linux Mint
+- Added: ISO Selection Option for any Debian
+
 *AUMBI 2.0.1.*
 - Fixed: Ubuntu Download Links (16.04.1)
 - Fixed: Kubuntu Download Links (16.04.1)

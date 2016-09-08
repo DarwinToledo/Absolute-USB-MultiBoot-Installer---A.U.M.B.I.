@@ -1,10 +1,11 @@
 #===========================================================
-# Spanish International File
-# by Darwin Toledo - www.darwintoledo.com
+# Spanish International Language File
+# (c)2016 by Darwin Toledo - www.darwintoledo.com
 #===========================================================
 
 !define RODRILANG ${LANG_SPANISHINTERNATIONAL}
 
+        LangString COMPLETED_TEXT           ${RODRILANG} "Todo terminado, Proceso Completado!"
 
         LangString License_Subtitle         ${RODRILANG} "Por favor, revise los términos de la licencia antes de continuar"
         LangString License_Text_Top         ${RODRILANG} "El software dentro de este programa se dividen en las siguientes licencias."

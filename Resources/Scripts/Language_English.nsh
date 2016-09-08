@@ -1,10 +1,11 @@
 #===========================================================
-# English File
-# by Darwin Toledo - www.darwintoledo.com
+# English Language File
+# (c)2016 by Darwin Toledo - www.darwintoledo.com
 #===========================================================
 
 !define RODRILANG ${LANG_ENGLISH}
 
+        LangString COMPLETED_TEXT           ${RODRILANG} "All Finished, Process is Complete!"
 
         LangString License_Subtitle         ${RODRILANG} "Please review the license terms before proceeding"
         LangString License_Text_Top         ${RODRILANG} "The software within this program falls under the following Licenses."
