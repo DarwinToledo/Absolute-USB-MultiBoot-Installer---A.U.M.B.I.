@@ -8,32 +8,34 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
      ${SetISOFileNames} "--- Ubuntu 32/64 Bit ---" "" "" "" "" "" ""
 	 ${SetISOFileNames} "" "" "" "" "" "" ""
 	 
- ${SetISOFileNames} "Ubuntu 32 bit"      "ubuntu*desktop*i386.iso"            "http://releases.ubuntu.com/16.04.1/ubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
- ${SetISOFileNames} "Ubuntu 64 bit"      "ubuntu*desktop*amd64.iso"            "http://releases.ubuntu.com/16.04.1/ubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
+ ${SetISOFileNames} "Ubuntu 32 bit"         "ubuntu*desktop*i386.iso"        "http://www.usbwithlinux.com/2016/09/ubuntu-32-bit.html"       "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
+ ${SetISOFileNames} "Ubuntu 64 bit"         "ubuntu*desktop*amd64.iso"       "http://www.usbwithlinux.com/2016/09/ubuntu-64-bit.html"       "casper" "linux.cfg" "http://www.ubuntu.com/desktop" "Ubuntu"
 
- ${SetISOFileNames} "Kubuntu 32 bit"     "kubuntu*desktop*i386.iso"           "http://cdimage.ubuntu.com/kubuntu/releases/16.04.1/release/kubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
- ${SetISOFileNames} "Kubuntu 64 bit"     "kubuntu*desktop*amd64.iso"           "http://cdimage.ubuntu.com/kubuntu/releases/16.04.1/release/kubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
+ ${SetISOFileNames} "Kubuntu 32 bit"        "kubuntu*desktop*i386.iso"       "http://www.usbwithlinux.com/2016/09/kubuntu-32bit.html"       "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
+ ${SetISOFileNames} "Kubuntu 64 bit"        "kubuntu*desktop*amd64.iso"      "http://www.usbwithlinux.com/2016/09/kubuntu-64-bit.html"      "casper" "linux.cfg" "http://www.kubuntu.org" "Kubuntu"
 
- ${SetISOFileNames} "Lubuntu 32 bit"        "lubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
- ${SetISOFileNames} "Lubuntu 64 bit"        "lubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
+ ${SetISOFileNames} "Lubuntu 32 bit"        "lubuntu*desktop*i386.iso"       "http://www.usbwithlinux.com/2016/09/lubuntu-32-bit.html"      "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
+ ${SetISOFileNames} "Lubuntu 64 bit"        "lubuntu*desktop*amd64.iso"      "http://www.usbwithlinux.com/2016/09/lubuntu-64-bit.html"      "casper" "linux.cfg" "http://lubuntu.net" "Lubuntu"
 
- ${SetISOFileNames} "Xubuntu 32 bit"        "xubuntu*desktop*i386.iso"       "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
- ${SetISOFileNames} "Xubuntu 64 bit"        "xubuntu*desktop*amd64.iso"      "http://cdimage.ubuntu.com/xubuntu/releases/16.04/release/xubuntu-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
+ ${SetISOFileNames} "Xubuntu 32 bit"        "xubuntu*desktop*i386.iso"       "http://www.usbwithlinux.com/2016/09/xubuntu-32-bit.html"      "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
+ ${SetISOFileNames} "Xubuntu 64 bit"        "xubuntu*desktop*amd64.iso"      "http://www.usbwithlinux.com/2016/09/xubuntu-64-bit.html"      "casper" "linux.cfg" "http://xubuntu.org" "Xubuntu"
 
- ${SetISOFileNames} "Ubuntu Gnome 32 bit"   "ubuntu-gnome*desktop*i386.iso"  "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
- ${SetISOFileNames} "Ubuntu Gnome 64 bit"   "ubuntu-gnome*desktop*amd64.iso" "http://cdimage.ubuntu.com/ubuntu-gnome/releases/16.04/release/ubuntu-gnome-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
+ ${SetISOFileNames} "Ubuntu Gnome 32 bit"   "ubuntu-gnome*desktop*i386.iso"  "http://www.usbwithlinux.com/2016/09/ubuntu-gnome-32-bit.html" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
+ ${SetISOFileNames} "Ubuntu Gnome 64 bit"   "ubuntu-gnome*desktop*amd64.iso" "http://www.usbwithlinux.com/2016/09/ubuntu-gnome-64-bit.html" "casper" "linux.cfg" "http://www.ubuntugnome.org" "Ubuntu Gnome"
 
- ${SetISOFileNames} "Ubuntu Mate 32 bit"    "ubuntu-mate*desktop*i386.iso"   "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04.1-desktop-i386.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
- ${SetISOFileNames} "Ubuntu Mate 64 bit"    "ubuntu-mate*desktop*amd64.iso"  "http://cdimage.ubuntu.com/ubuntu-mate/releases/16.04/release/ubuntu-mate-16.04.1-desktop-amd64.iso" "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
+ ${SetISOFileNames} "Ubuntu Mate 32 bit"    "ubuntu-mate*desktop*i386.iso"   "http://www.usbwithlinux.com/2016/09/ubuntu-mate-32-bit.html"  "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
+ ${SetISOFileNames} "Ubuntu Mate 64 bit"    "ubuntu-mate*desktop*amd64.iso"  "http://www.usbwithlinux.com/2016/09/ubuntu-mate-64-bit.html"  "casper" "linux.cfg" "https://ubuntu-mate.org/" "Ubuntu Mate"
 
- ${SetISOFileNames} "Ubuntu Server 32 bit"  "ubuntu*server*i386.iso"         "http://releases.ubuntu.com/16.04/ubuntu-16.04.1-server-i386.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
- ${SetISOFileNames} "Ubuntu Server 64 bit"  "ubuntu*server*amd64.iso"        "http://releases.ubuntu.com/16.04/ubuntu-16.04.1-server-amd64.iso" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
+ ${SetISOFileNames} "Ubuntu Server 32 bit"  "ubuntu*server*i386.iso"         "http://www.usbwithlinux.com/2016/09/ubuntu-server-32-bit.html" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
+ ${SetISOFileNames} "Ubuntu Server 64 bit"  "ubuntu*server*amd64.iso"        "http://www.usbwithlinux.com/2016/09/ubuntu-server-64-bit.html" "NULL" "linux.cfg" "http://www.ubuntu.com/server" "Ubuntu Server"
 
- ${SetISOFileNames} "Ubuntu Studio 32 bit"  "ubuntustudio*i386.iso"          "http://cdimage.ubuntu.com/ubuntustudio/releases/16.04/release/ubuntustudio-16.04.1-dvd-i386.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
- ${SetISOFileNames} "Ubuntu Studio 64 bit"  "ubuntustudio*amd64.iso"         "http://cdimage.ubuntu.com/ubuntustudio/releases/16.04/release/ubuntustudio-16.04.1-dvd-amd64.iso" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
+ ${SetISOFileNames} "Ubuntu Studio 32 bit"  "ubuntustudio*i386.iso"          "http://www.usbwithlinux.com/2016/09/ubuntu-studio-32-bit.html" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
+ ${SetISOFileNames} "Ubuntu Studio 64 bit"  "ubuntustudio*amd64.iso"         "http://www.usbwithlinux.com/2016/09/ubuntu-studio-64-bit.html" "casper" "linux.cfg" "http://ubuntustudio.org" "Ubuntu Studio"
 
- ${SetISOFileNames} "Edubuntu 32 bit"       "edubuntu*i386.iso"              "http://cdimage.ubuntu.com/edubuntu/releases/trusty/release/edubuntu-14.04.4-dvd-i386.iso" "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
- ${SetISOFileNames} "Edubuntu 64 bit"       "edubuntu*amd64.iso"             "http://cdimage.ubuntu.com/edubuntu/releases/trusty/release/edubuntu-14.04.4-dvd-amd64.iso" "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
+ ${SetISOFileNames} "Edubuntu 32 bit"       "edubuntu*i386.iso"              "http://www.usbwithlinux.com/2016/09/edubuntu-32-bit.html"      "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
+ ${SetISOFileNames} "Edubuntu 64 bit"       "edubuntu*amd64.iso"             "http://www.usbwithlinux.com/2016/09/edubuntu-64-bit.html"      "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
+
+ ${SetISOFileNames} "Ubuntu Other/Any"       "*buntu*.iso"             "http://www.usbwithlinux.com/search/label/Ubuntu"      "casper" "linux.cfg" "http://edubuntu.org" "Edubuntu"
 
 ;REVISIT ${SetISOFileNames} "Ubuntu Rescue Remix (System Rescue)" "ubuntu-rescue-remix*.iso" "http://ubuntu-rescue-remix.org/Download" "NULL" "system.cfg" "http://ubuntu-rescue-remix.org" "URR"
 
@@ -41,43 +43,43 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
      ${SetISOFileNames} "--- Linux Mint 32/64 Bit ---" "" "" "" "" "" ""
 	 ${SetISOFileNames} "" "" "" "" "" "" ""
    
- ${SetISOFileNames} "Linux Mint Cinnamon 32bit" "linuxmint*cinnamon-64bit.iso" "https://www.linuxmint.com/edition.php?id=219" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
- ${SetISOFileNames} "Linux Mint Cinnamon 64bit" "linuxmint*cinnamon-32bit.iso" "https://www.linuxmint.com/edition.php?id=220" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Cinnamon 32bit" "linuxmint*cinnamon-64bit.iso" "http://www.usbwithlinux.com/2016/09/linux-mint-cinnamon-32-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Cinnamon 64bit" "linuxmint*cinnamon-32bit.iso" "http://www.usbwithlinux.com/2016/09/linux-mint-cinnamon-64-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
 
- ${SetISOFileNames} "Linux Mint Mate 32bit" "linuxmint*mate-32bit.iso" "https://www.linuxmint.com/edition.php?id=218" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
- ${SetISOFileNames} "Linux Mint Mate 64bit" "linuxmint*mate-64bit.iso" "https://www.linuxmint.com/edition.php?id=217" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Mate 32bit"     "linuxmint*mate-32bit.iso"     "http://www.usbwithlinux.com/2016/09/linux-mint-mate-32-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Mate 64bit"     "linuxmint*mate-64bit.iso"     "http://www.usbwithlinux.com/2016/09/linux-mint-mate-64-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
 
- ${SetISOFileNames} "Linux Mint XFCE 32bit" "linuxmint*xfce-32bit.iso" "https://www.linuxmint.com/edition.php?id=218" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
- ${SetISOFileNames} "Linux Mint XFCE 64bit" "linuxmint*xfce-64bit.iso" "https://www.linuxmint.com/edition.php?id=217" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint XFCE 32bit"     "linuxmint*xfce-32bit.iso"     "http://www.usbwithlinux.com/2016/09/linux-mint-xfce-32-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint XFCE 64bit"     "linuxmint*xfce-64bit.iso"     "http://www.usbwithlinux.com/2016/09/linux-mint-xfce-64-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
 
- ${SetISOFileNames} "Linux Mint Other/Any" "linuxmint*.iso" "http://www.linuxmint.com/download.php" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint Other/Any" "linuxmint*.iso" "http://www.usbwithlinux.com/search/label/Linux%20Mint" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
 
      ${SetISOFileNames} "" "" "" "" "" "" ""
      ${SetISOFileNames} "--- Debian Live 32/64 Bit ---" "" "" "" "" "" ""
 	 ${SetISOFileNames} "" "" "" "" "" "" ""
 	 
- ${SetISOFileNames} "Debian Live Standard 32bit" "debian-live*i386-standard-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/debian-live-8.5.0-i386-standard.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Standard"
- ${SetISOFileNames} "Debian Live Standard 64bit" "debian-live*amd64-standard-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-8.5.0-amd64-standard.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Standard"
+ ${SetISOFileNames} "Debian Live Standard 32bit" "debian-live*i386-standard-desktop.iso"  "http://www.usbwithlinux.com/2016/09/debian-standard-32-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Standard"
+ ${SetISOFileNames} "Debian Live Standard 64bit" "debian-live*amd64-standard-desktop.iso" "http://www.usbwithlinux.com/2016/09/debian-standard-64-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Standard"
 
- ${SetISOFileNames} "Debian Live Cinnamon 32bit" "debian-live*i386-cinnamon-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/debian-live-8.5.0-i386-cinnamon-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Cinnamon"
- ${SetISOFileNames} "Debian Live Cinnamon 64bit" "debian-live*amd64-cinnamon-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-8.5.0-amd64-cinnamon-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Cinnamon"
+ ${SetISOFileNames} "Debian Live Cinnamon 32bit" "debian-live*i386-cinnamon-desktop.iso"  "http://www.usbwithlinux.com/2016/09/debian-cinnamon-32-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Cinnamon"
+ ${SetISOFileNames} "Debian Live Cinnamon 64bit" "debian-live*amd64-cinnamon-desktop.iso" "http://www.usbwithlinux.com/2016/09/debian-cinnamon-64-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Cinnamon"
 
- ${SetISOFileNames} "Debian Live Gnome 32bit" "debian-live*i386-gnome-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/debian-live-8.5.0-i386-gnome-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Gnome"
- ${SetISOFileNames} "Debian Live Gnome 64bit" "debian-live*amd64-gnome-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-8.5.0-amd64-gnome-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Gnome"
+ ${SetISOFileNames} "Debian Live Gnome 32bit"    "debian-live*i386-gnome-desktop.iso"     "http://www.usbwithlinux.com/2016/09/debian-gnome-32-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Gnome"
+ ${SetISOFileNames} "Debian Live Gnome 64bit"    "debian-live*amd64-gnome-desktop.iso"    "http://www.usbwithlinux.com/2016/09/debian-gnome-64-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Gnome"
 
- ${SetISOFileNames} "Debian Live KDE 32bit" "debian-live*i386-kde-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/debian-live-8.5.0-i386-kde-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live KDE"
- ${SetISOFileNames} "Debian Live KDE 64bit" "debian-live*amd64-kde-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-8.5.0-amd64-kde-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live KDE"
+ ${SetISOFileNames} "Debian Live KDE 32bit"      "debian-live*i386-kde-desktop.iso"       "http://www.usbwithlinux.com/2016/09/debian-kde-32-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live KDE"
+ ${SetISOFileNames} "Debian Live KDE 64bit"      "debian-live*amd64-kde-desktop.iso"      "http://www.usbwithlinux.com/2016/09/debian-kde-64-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live KDE"
 
- ${SetISOFileNames} "Debian Live LXDE 32bit" "debian-live*i386-lxde-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/debian-live-8.5.0-i386-lxde-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live LXDE"
- ${SetISOFileNames} "Debian Live LXDE 64bit" "debian-live*amd64-lxde-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-8.5.0-amd64-lxde-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live LXDE"
+ ${SetISOFileNames} "Debian Live LXDE 32bit"     "debian-live*i386-lxde-desktop.iso"      "http://www.usbwithlinux.com/2016/09/debian-lxde-32-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live LXDE"
+ ${SetISOFileNames} "Debian Live LXDE 64bit"     "debian-live*amd64-lxde-desktop.iso"     "http://www.usbwithlinux.com/2016/09/debian-lxde-64-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live LXDE"
 
- ${SetISOFileNames} "Debian Live Mate 32bit" "debian-live*i386-mate-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/debian-live-8.5.0-i386-mate-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Mate"
- ${SetISOFileNames} "Debian Live Mate 64bit" "debian-live*amd64-mate-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-8.5.0-amd64-mate-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Mate"
+ ${SetISOFileNames} "Debian Live Mate 32bit"     "debian-live*i386-mate-desktop.iso"      "http://www.usbwithlinux.com/2016/09/debian-mate-32-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Mate"
+ ${SetISOFileNames} "Debian Live Mate 64bit"     "debian-live*amd64-mate-desktop.iso"     "http://www.usbwithlinux.com/2016/09/debian-mate-64-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live Mate"
 
- ${SetISOFileNames} "Debian Live XFCE 32bit" "debian-live*i386-xfce-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/i386/iso-hybrid/debian-live-8.5.0-i386-xfce-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
- ${SetISOFileNames} "Debian Live XFCE 64bit" "debian-live*amd64-xfce-desktop.iso" "http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-8.5.0-amd64-xfce-desktop.iso" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
+ ${SetISOFileNames} "Debian Live XFCE 32bit"     "debian-live*i386-xfce-desktop.iso"      "http://www.usbwithlinux.com/2016/09/debian-xfce-32-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
+ ${SetISOFileNames} "Debian Live XFCE 64bit"     "debian-live*amd64-xfce-desktop.iso"     "http://www.usbwithlinux.com/2016/09/debian-xfce-64-bit.html" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
 
- ${SetISOFileNames} "Debian Live Other/Any" "debian-live*amd64-xfce-desktop.iso" "https://www.debian.org/devel/debian-live/" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
+ ${SetISOFileNames} "Debian Live Other/Any"      "debian-live*amd64-xfce-desktop.iso"     "http://www.usbwithlinux.com/search/label/Debian" "NULL" "linux.cfg" "https://www.debian.org/devel/debian-live/" "Debian Live XFCE"
 
      ${SetISOFileNames} "" "" "" "" "" "" ""
      ${SetISOFileNames} "--- Fedora 32/64 Bit ---" "" "" "" "" "" ""

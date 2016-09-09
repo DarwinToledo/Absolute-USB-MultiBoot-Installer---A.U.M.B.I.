@@ -1,5 +1,6 @@
 #===========================================================
-# RUBIB (Rodri Universal multiBoot Installer B)
+# AUMBI (Absolute USB Multiboot Installer)
+# http://www.usbwithlinux.com
 # Macros by Darwin Toledo
 #===========================================================
 
