@@ -52,6 +52,9 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
  ${SetISOFileNames} "Linux Mint XFCE 32bit"     "linuxmint*xfce-32bit.iso"     "http://www.usbwithlinux.com/2016/09/linux-mint-xfce-32-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
  ${SetISOFileNames} "Linux Mint XFCE 64bit"     "linuxmint*xfce-64bit.iso"     "http://www.usbwithlinux.com/2016/09/linux-mint-xfce-64-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
 
+ ${SetISOFileNames} "Linux Mint KDE 32bit"     "linuxmint*kde-32bit.iso"     "http://www.usbwithlinux.com/2016/09/linux-mint-kde-32-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+ ${SetISOFileNames} "Linux Mint KDE 64bit"     "linuxmint*kde-64bit.iso"     "http://www.usbwithlinux.com/2016/09/linux-mint-kde-64-bit.html" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
+
  ${SetISOFileNames} "Linux Mint Other/Any" "linuxmint*.iso" "http://www.usbwithlinux.com/search/label/Linux%20Mint" "casper" "linux.cfg" "http://www.linuxmint.com" "Linux Mint"
 
      ${SetISOFileNames} "" "" "" "" "" "" ""
