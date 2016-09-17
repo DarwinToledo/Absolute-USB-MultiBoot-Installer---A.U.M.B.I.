@@ -5,7 +5,11 @@
 
 !define RODRILANG ${LANG_SPANISHINTERNATIONAL}
 
+        LangString LICENSE_AUMBI_TOP_TEXT   ${RODRILANG} "Acuerdo de Licencia"
+        LangString SELECTION_AUMBI_TOP_TEXT ${RODRILANG} "Opciones de Distro e ISO"
+        LangString INSTALL_AUMBI_TOP_TEXT   ${RODRILANG} "Procesando ISO en USB"
         LangString COMPLETED_TEXT           ${RODRILANG} "Todo terminado, Proceso Completado!"
+        LangString ADD_MORE_DISTRO_MB_TEXT  ${RODRILANG} "¿Le gustaría añadir màs ISOs/Distros Ahora en $DestDisk?"
 
         LangString License_Subtitle         ${RODRILANG} "Por favor, revise los términos de la licencia antes de continuar"
         LangString License_Text_Top         ${RODRILANG} "El software dentro de este programa se dividen en las siguientes licencias."
@@ -29,7 +33,7 @@
         LangString Install_Finish_Sucess    ${RODRILANG} "${NAME} sucessfully $InUnStalled $DistroName on $JustDrive"
         LangString Finish_Install           ${RODRILANG} "$InUnStallation is Complete."
         LangString Finish_Title             ${RODRILANG} "${NAME} has completed the $InUnStallation."
-        LangString Finish_Text              ${RODRILANG} "Your Selections have been $InUnStalled on your USB drive.$\r$\n$\r$\nFeel Free to run this tool again to $InUnStall more Distros.$\r$\n$\r$\nYUMI will keep track of selections you have already $InUnStalled."
+        LangString Finish_Text              ${RODRILANG} "Your Selections have been $InUnStalled on your USB drive.$\r$\n$\r$\nFeel Free to run this tool again to $InUnStall more Distros.$\r$\n$\r$\n${NAME} will keep track of selections you have already $InUnStalled."
         LangString Finish_Link              ${RODRILANG} "Visit the ${NAME} Tutorial Page"
         LangString Create_Button            ${RODRILANG} "Crear"
 
@@ -57,7 +61,7 @@
         LangString CLICK_TO_ONLINEHELP2     ${RODRILANG} "Haga clic aquí para visitar la web de ${NAME} para Ayuda!"
         LangString RL2_SHOWING              ${RODRILANG} "Mostrando dispositivos"
         LangString RL2_SHOWALL              ${RODRILANG} "¿Mostrar dispositivos?"
-        LangString RL_ODL                   ${RODRILANG} "Ennlace abierto"
+        LangString RL_ODL                   ${RODRILANG} "Enlace abierto"
         LangString RL_DL1                   ${RODRILANG} "Enlace de Descarga"
 
         LangString MENU_LABEL_LUNIX_DIST    ${RODRILANG} "Distribuciones Linux"
@@ -71,7 +75,7 @@
 
         LangString MB_DL2                   ${RODRILANG} "¿Lanzar el Enlace de descarga?$\r$\nPermitir que finalice la descarga antes de pasar al paso 2."
         LangString RL_DL2                   ${RODRILANG} "Enlace de Descarga"
-        LangString RL2_STEP3                ${RODRILANG} "Paso 3: Una vez que la descarga haya finalizado, examine y seleccione la ISO."
+        LangString RL2_STEP3                ${RODRILANG} "Paso 3: Finalizada la descarga, examinar y seleccionar ISO."
         LangString BW2_STEP3                ${RODRILANG} "Paso 3: Examinar y seleccionar $ISOFileName"
         LangString BW_ISO_1                 ${RODRILANG} "Examinar para buscar $ISOFileName  -->"
         LangString VTO_HOME1                ${RODRILANG} "Visitar la web de $OfficialName"

@@ -621,7 +621,7 @@ Function Config2Write
 FunctionEnd
 
 Function NoQuit
-MessageBox MB_YESNO "Would you like to add more ISOs/Distros Now on $DestDisk?" IDYES noskip
+MessageBox MB_YESNO "$(ADD_MORE_DISTRO_MB_TEXT)" IDYES noskip
     StrCmp $R8 3 0 End ;Compare $R8 variable with current page #
     StrCpy $R9 1 ; Goes to finish page
     Call RelGotoPage
@@ -728,5 +728,29 @@ FunctionEnd
   FunctionEnd
 
 Function AUMBIInit
-  Aero::Apply
+  ;Aero::Apply
+    FindWindow $R0 "#32770" "" $HWNDPARENT
+    GetDlgItem $R0 $HWNDPARENT 9116
+          SendMessage $R0 ${WM_SETTEXT} 0 "STR:"
+          SetCtlColors $R0 0xc9c9c9 transparent
+
+          CreateFont $1 "Segoe UI" "16" "1000"
+          SendMessage $R0 ${WM_SETFONT} $1 1
+          
+          GetDlgItem $R8 $HWNDPARENT 1256
+          ShowWindow $R8 ${SW_HIDE}
+
+          GetDlgItem $R7 $HWNDPARENT 1028
+          ShowWindow $R7 ${SW_HIDE}
+          GetDlgItem $R6 $HWNDPARENT 1035
+          ShowWindow $R6 ${SW_HIDE}
+
 FunctionEnd
+
+/*
+Function SelPage_Color
+SetCtlColors $Dialog 0xFF00FF transparent
+FunctionEnd
+*/
+
+

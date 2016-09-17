@@ -5,7 +5,11 @@
 
 !define RODRILANG ${LANG_ENGLISH}
 
+        LangString LICENSE_AUMBI_TOP_TEXT   ${RODRILANG} "License Agreement"
+        LangString SELECTION_AUMBI_TOP_TEXT ${RODRILANG} "Distro and ISO Options"
+        LangString INSTALL_AUMBI_TOP_TEXT   ${RODRILANG} "Processing ISO in USB"
         LangString COMPLETED_TEXT           ${RODRILANG} "All Finished, Process is Complete!"
+        LangString ADD_MORE_DISTRO_MB_TEXT  ${RODRILANG} "Would you like to add more ISOs/Distros Now on $DestDisk?"
 
         LangString License_Subtitle         ${RODRILANG} "Please review the license terms before proceeding"
         LangString License_Text_Top         ${RODRILANG} "The software within this program falls under the following Licenses."

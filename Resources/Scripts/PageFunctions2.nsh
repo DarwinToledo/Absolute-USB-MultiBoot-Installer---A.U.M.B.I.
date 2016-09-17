@@ -5,9 +5,10 @@
          Function SelectionsPage
                   StrCpy $R8 2
                   !insertmacro MUI_HEADER_TEXT $(SelectDist_Title) $(SelectDist_Subtitle)
+
                   nsDialogs::Create 1018
                   Pop $Dialog
-
+                  ;Call SelPage_Color
                   ${If} $RepeatInstall == "YES"
                   ${NSD_SetText} $DestDriveTxt "$DestDrive"
 
@@ -110,6 +111,7 @@
                   Pop $Link
                   ${NSD_OnClick} $LINK onClickMyLink
 
+Call BKG_BITMAP
                   ; Disable Next Button until a selection is made for all
                   GetDlgItem $6 $HWNDPARENT 1
                   EnableWindow $6 0
@@ -123,7 +125,6 @@
                   EnableWindow $DownloadISO 0
                   ShowWindow $DistroLink 0
                   StrCpy $JustISOName "NULL" ; Set to NULL until something is selected
-                  nsDialogs::Show
 
         ${Else}
 
@@ -211,6 +212,7 @@
                   Pop $Link
                   ${NSD_OnClick} $LINK onClickMyLink
 
+Call BKG_BITMAP
                   ;; Add a custom donate button
                   ;   ${NSD_CreateBitmap} 80% 125 20% 50 "PayPal Donation"
                   ;   Var /Global Donate
@@ -240,7 +242,12 @@
                   ShowWindow $Format 0
                   ShowWindow $ForceShowAll 0
                   ShowWindow $Uninstaller 0
-                  nsDialogs::Show
                   ;  ${NSD_FreeImage} $DonateHandle
         ${EndIf}
+        FunctionEnd
+
+        Function SelectionsPage_Show
+                  Call SelectionsPage
+                  Call SelectionsPage_Color_Title
+                  nsDialogs::Show
         FunctionEnd

@@ -2,10 +2,6 @@
 #SELECTIONS PAGE FUNCTIONS 1
 #===========================================================
 
-        Function InstFiles_PreFunction
-                 StrCpy $R8 3
-        FunctionEnd
-
         Function Finish_PreFunction
                  StrCpy $R8 4
                  Call NoQuit

@@ -40,6 +40,7 @@
          !include       "Variables.nsh"
 
          !include DiskVoodoo.nsh ; DiskVoodoo Script created by Lance http://www.pendrivelinux.com
+         !include StrContains.nsh ; Let's check if a * wildcard exists
 
 #===========================================================
 # MoreInfo Plugin - Adds Version Tab fields to Properties. Plugin created by onad http://nsis.sourceforge.net/MoreInfo_plug-in
@@ -49,7 +50,7 @@
          VIAddVersionKey CompanyName "${RUBIB_WEBSITE}"
          VIAddVersionKey LegalCopyright "Copyleft ©2016 Darwin Toledo www.usbwithlinux.com"
          VIAddVersionKey FileVersion "${VERSION}"
-         VIAddVersionKey FileDescription "Automated Universal MultiBoot UFD Creation Tool"
+         VIAddVersionKey FileDescription "Absolute USB MultiBoot Installer (UFD Creation Tool)"
          VIAddVersionKey License "GPL Version 2"
 
 #===========================================================
@@ -79,19 +80,22 @@
          !define MUI_CUSTOMFUNCTION_GUIINIT AUMBIInit
          !define MUI_FINISHPAGE_NOAUTOCLOSE
          !define MUI_HEADERIMAGE
-         !define MUI_HEADERIMAGE_BITMAP "Resources\Images\usb-logo-nsis.bmp"
-         !define MUI_HEADERIMAGE_BITMAP_NOSTRETCH
-         !define MUI_HEADERIMAGE_RIGHT
+         !define MUI_HEADERIMAGE_BITMAP "Resources\Images\AUMBI_BKG.bmp"
+         !define MUI_UI_HEADERIMAGE "Resources\UI\AUMBI_UI.exe"
+         ;!define MUI_HEADERIMAGE_BITMAP_NOSTRETCH
+         ;!define MUI_HEADERIMAGE_RIGHT
+
 
          ; License Agreement Page
          !define MUI_TEXT_LICENSE_SUBTITLE $(License_Subtitle)
          !define MUI_LICENSEPAGE_TEXT_TOP $(License_Text_Top)
          !define MUI_LICENSEPAGE_TEXT_BOTTOM $(License_Text_Bottom)
          !define MUI_PAGE_CUSTOMFUNCTION_PRE License_PreFunction
+         !define MUI_PAGE_CUSTOMFUNCTION_SHOW License_ShowFunction
          !insertmacro MUI_PAGE_LICENSE "AUMBI.rtf"
 
          ; Distro Selection Page
-         Page custom SelectionsPage
+         Page custom SelectionsPage_Show
 
          ; Install Files Page
          ;!define MUI_INSTFILESPAGE_COLORS "00FF00 000000" ;Green and Black
@@ -100,6 +104,7 @@
          !define MUI_TEXT_INSTALLING_SUBTITLE $(Install_SubTitle)
          !define MUI_TEXT_FINISH_SUBTITLE $(Install_Finish_Sucess)
          !define MUI_PAGE_CUSTOMFUNCTION_PRE InstFiles_PreFunction
+         !define MUI_PAGE_CUSTOMFUNCTION_SHOW InstFiles_ShowFunction
          !insertmacro MUI_PAGE_INSTFILES
 
          ; Finish page
@@ -122,24 +127,15 @@
          !include DistroList.nsh ; List of Distributions
          !include "CasperScript.nsh" ; For creation of Persistent Casper-rw files
 
-#===========================================================
-#
-#===========================================================
-
-         Function License_PreFunction
-             StrCpy $R8 1 ;This is the 1st page
-         FunctionEnd
 
          
 #===========================================================
-#INCLUDE SELECTIONS PAGE
+#INCLUDES PAGE
 #===========================================================
-         !include "Resources\Scripts\SelectionsPage.nsh"
+
+         !include "Resources\Scripts\PageFunctions1.nsh"
+         !include "Resources\Scripts\PageFunctions2.nsh"
 
          #SELECTIONS PAGE FUNCTIONS HEADER 1
-         !include "Resources\Scripts\SelectionsPageFunctions1.nsh"
-
-         !include StrContains.nsh ; Let's check if a * wildcard exists
-
-          #SELECTIONS PAGE FUNCTIONS HEADER 2
-         !include "Resources\Scripts\SelectionsPageFunctions2.nsh"
+         !include "Resources\Scripts\PageFunctions3.nsh"
+         !include "Resources\Scripts\PageFunctions4.nsh"
