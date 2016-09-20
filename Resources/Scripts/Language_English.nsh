@@ -10,6 +10,7 @@
         LangString INSTALL_AUMBI_TOP_TEXT   ${RODRILANG} "Processing ISO in USB"
         LangString COMPLETED_TEXT           ${RODRILANG} "All Finished, Process is Complete!"
         LangString ADD_MORE_DISTRO_MB_TEXT  ${RODRILANG} "Would you like to add more ISOs/Distros Now on $DestDisk?"
+        LangString FINISH_AUMBI_TEXT        ${RODRILANG} "Process Completed"
 
         LangString License_Subtitle         ${RODRILANG} "Please review the license terms before proceeding"
         LangString License_Text_Top         ${RODRILANG} "The software within this program falls under the following Licenses."

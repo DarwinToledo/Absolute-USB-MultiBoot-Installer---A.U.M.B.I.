@@ -112,10 +112,10 @@
          !define MUI_FINISHPAGE_TEXT $(Finish_Text)
          !define MUI_FINISHPAGE_LINK $(Finish_Link)
          !define MUI_FINISHPAGE_LINK_LOCATION "${RUBIB_LINK2}"
-         !define MUI_WELCOMEFINISHPAGE_BITMAP "Resources\Images\finish.bmp"
+         ;!define MUI_WELCOMEFINISHPAGE_BITMAP "Resources\Images\finish.bmp"
          !define MUI_PAGE_CUSTOMFUNCTION_PRE Finish_PreFunction
-         !insertmacro MUI_PAGE_FINISH
-
+         ;!insertmacro MUI_PAGE_FINISH
+         Page custom fnc_AUMBI_FINISH_Show
          ; English Language files
          !insertmacro MUI_LANGUAGE "English" ; first language is the default language
          !include     "Language_English.nsh"
