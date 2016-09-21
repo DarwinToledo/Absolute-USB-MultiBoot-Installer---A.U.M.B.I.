@@ -1,6 +1,7 @@
-*AUMBI 2.5.0.*
+*AUMBI 2.5.0.438
 - New: User Interface
 - New: Links now in AUMBI official website
+- New: Icon 256x256
 - Added: ISO Selection Option for Fedora Workstation
 - Added: ISO Selection Option for Fedora KDE
 - Added: ISO Selection Option for Fedora XFCE
