@@ -32,10 +32,10 @@
         LangString Install_Title            ${RODRILANG} "$InUnStall $ISOFileName"
         LangString Install_SubTitle         ${RODRILANG} "Please wait while we $InUnStall $DistroName on $JustDrive"
         LangString Install_Finish_Sucess    ${RODRILANG} "${NAME} sucessfully $InUnStalled $DistroName on $JustDrive"
-        LangString Finish_Install           ${RODRILANG} "$InUnStallation is Complete."
+        LangString Finish_Install           ${RODRILANG} "$InUnStallation Completa."
         LangString Finish_Title             ${RODRILANG} "${NAME} has completed the $InUnStallation."
         LangString Finish_Text              ${RODRILANG} "Your Selections have been $InUnStalled on your USB drive.$\r$\n$\r$\nFeel Free to run this tool again to $InUnStall more Distros.$\r$\n$\r$\n${NAME} will keep track of selections you have already $InUnStalled."
-        LangString Finish_Link              ${RODRILANG} "Visit the ${NAME} Tutorial Page"
+        LangString Finish_Link              ${RODRILANG} "Haga clic aquí para visitar la web de ${NAME} para Ayuda!"
         LangString Create_Button            ${RODRILANG} "Crear"
 
         LangString VIEW_ONREM_DISTROS       ${RODRILANG} "¿Ver o quitar distros instaladas?"

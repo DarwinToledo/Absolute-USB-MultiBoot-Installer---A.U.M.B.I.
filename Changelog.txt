@@ -1,11 +1,17 @@
 *AUMBI 2.5.0.*
 - New: User Interface
-
-*AUMBI 2.0.2.250
 - New: Links now in AUMBI official website
-- Added: ISO Selection Option for any Ubuntu
-- Added: ISO Selection Option for any Linux Mint
-- Added: ISO Selection Option for any Debian
+- Added: ISO Selection Option for Fedora Workstation
+- Added: ISO Selection Option for Fedora KDE
+- Added: ISO Selection Option for Fedora XFCE
+- Added: ISO Selection Option for Fedora LXDE
+- Added: ISO Selection Option for Fedora Mate Compiz
+- Added: ISO Selection Option for Fedora Cinnamon
+- Added: ISO Selection Option for Fedora Soas
+- Added: ISO Selection Option for any edition of Fedora
+- Added: ISO Selection Option for any edition of Ubuntu
+- Added: ISO Selection Option for any edition of Linux Mint
+- Added: ISO Selection Option for any edition of Debian
 - Update: Linux Mint 18 XFCE Links
 
 

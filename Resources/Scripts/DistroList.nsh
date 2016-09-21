@@ -88,18 +88,30 @@ Function SetISOFileName ; Distro2Check (Name of the Distro), ISO2Check2 (The ISO
      ${SetISOFileNames} "--- Fedora 32/64 Bit (Hybrid)---" "" "" "" "" "" ""
 	 ${SetISOFileNames} "" "" "" "" "" "" ""
  
- ${SetISOFileNames} "Fedora" "Fedora-Live*.iso" "https://getfedora.org/en/workstation/download/" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
- ${SetISOFileNames} "Fedora MATE" "Fedora-Live*.iso" "https://getfedora.org/en/workstation/download/" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
- ${SetISOFileNames} "Fedora KDE" "Fedora-Live*.iso" "https://getfedora.org/en/workstation/download/" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
- ${SetISOFileNames} "Fedora LXDE" "Fedora-Live*.iso" "https://getfedora.org/en/workstation/download/" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
- ${SetISOFileNames} "Fedora XFCE" "Fedora-Live*.iso" "https://getfedora.org/en/workstation/download/" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora Workstation 32bit" "Fedora-Workstation-Live-i386*.iso" "http://www.usbwithlinux.com/2016/09/fedora-workstation-32bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora Workstation 64bit" "Fedora-Workstation-Live-x86_64*.iso" "http://www.usbwithlinux.com/2016/09/fedora-workstation-64bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora KDE 32bit"         "Fedora-KDE-Live-i386*.iso" "http://www.usbwithlinux.com/2016/09/fedora-kde-32-bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora KDE 64bit"         "Fedora-KDE-Live-x86_64*.iso" "http://www.usbwithlinux.com/2016/09/fedora-kde-64bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora XFCE 32bit"        "Fedora-xfce-Live-i386*.iso" "http://www.usbwithlinux.com/2016/09/fedora-xfce-32bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora XFCE 64bit"        "Fedora-xfce-Live-x86_64*.iso" "http://www.usbwithlinux.com/2016/09/fedora-xfce-64bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora LXDE 32bit"        "Fedora-LXDE-Live-i386*.iso" "http://www.usbwithlinux.com/2016/09/fedora-lxde-32bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora LXDE 64bit"        "Fedora-LXDE-Live-x86_64*.iso" "http://www.usbwithlinux.com/2016/09/fedora-lxde-64bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora MATE Compiz 32bit" "Fedora-MATE_Compiz-Live-i386*.iso" "http://www.usbwithlinux.com/2016/09/fedora-mate-compiz-32bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora MATE Compiz 64bit" "Fedora-MATE_Compiz-Live-x86_64*.iso" "http://www.usbwithlinux.com/2016/09/fedora-mate-compiz-64bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora Cinnamon 32bit"    "Fedora-Cinnamon-Live-i386*.iso" "http://www.usbwithlinux.com/2016/09/fedora-cinnamon-32bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora Cinnamon 64bit"    "Fedora-Cinnamon-Live-x86_64*.iso" "http://www.usbwithlinux.com/2016/09/fedora-cinnamon-64bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora Soas 32bit"        "Fedora-Soas-Live-i386*.iso" "http://www.usbwithlinux.com/2016/09/fedora-soas-32bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+ ${SetISOFileNames} "Fedora Soas 64bit"        "Fedora-Soas-Live-x86_64*.iso" "http://www.usbwithlinux.com/2016/09/fedora-soas-64bit.html" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+
+ ${SetISOFileNames} "Fedora Other/Any"         "Fedora*Live*.iso" "http://www.usbwithlinux.com/search/label/Fedora" "NULL" "linux.cfg" "http://fedoraproject.org" "Fedora"
+
 
      ${SetISOFileNames} "" "" "" "" "" "" ""
      ${SetISOFileNames} "--- OpenSUSE ---" "" "" "" "" "" ""
 	 ${SetISOFileNames} "" "" "" "" "" "" ""
 
- ${SetISOFileNames} "OpenSUSE 32bit" "openSUSE*86.iso" "http://suse.mirrors.tds.net/pub/opensuse/distribution/13.2/iso/openSUSE-13.2-GNOME-Live-i686.iso" "NULL" "linux.cfg" "http://software.opensuse.org" "OpenSUSE"
- ${SetISOFileNames} "OpenSUSE 64bit" "openSUSE*64.iso" "http://suse.mirrors.tds.net/pub/opensuse/distribution/13.2/iso/openSUSE-13.2-GNOME-Live-x86_64.iso" "NULL" "linux.cfg" "http://software.opensuse.org" "OpenSUSE"
+ ${SetISOFileNames} "OpenSUSE 32bit" "openSUSE*86.iso" "http://www.usbwithlinux.com/2016/09/open-suse-32-64-bit.html" "NULL" "linux.cfg" "http://software.opensuse.org" "OpenSUSE"
+ ${SetISOFileNames} "OpenSUSE 64bit" "openSUSE*64.iso" "http://www.usbwithlinux.com/2016/09/open-suse-32-64-bit.html" "NULL" "linux.cfg" "http://software.opensuse.org" "OpenSUSE"
  
      ${SetISOFileNames} "" "" "" "" "" "" ""
      ${SetISOFileNames} "--- Puppy Linux Based ---" "" "" "" "" "" ""
