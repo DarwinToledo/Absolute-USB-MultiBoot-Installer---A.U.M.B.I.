@@ -111,7 +111,7 @@
                   Pop $Link
                   ${NSD_OnClick} $LINK onClickMyLink
 
-Call BKG_BITMAP
+                  Call BKG_BITMAP
                   ; Disable Next Button until a selection is made for all
                   GetDlgItem $6 $HWNDPARENT 1
                   EnableWindow $6 0
@@ -212,7 +212,7 @@ Call BKG_BITMAP
                   Pop $Link
                   ${NSD_OnClick} $LINK onClickMyLink
 
-Call BKG_BITMAP
+                  Call BKG_BITMAP
                   ;; Add a custom donate button
                   ;   ${NSD_CreateBitmap} 80% 125 20% 50 "PayPal Donation"
                   ;   Var /Global Donate

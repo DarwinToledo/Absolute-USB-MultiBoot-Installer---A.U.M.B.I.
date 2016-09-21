@@ -34,7 +34,7 @@
         LangString Install_Finish_Sucess    ${RODRILANG} "${NAME} sucessfully $InUnStalled $DistroName on $JustDrive"
         LangString Finish_Install           ${RODRILANG} "$InUnStallation Completa."
         LangString Finish_Title             ${RODRILANG} "${NAME} has completed the $InUnStallation."
-        LangString Finish_Text              ${RODRILANG} "Your Selections have been $InUnStalled on your USB drive.$\r$\n$\r$\nFeel Free to run this tool again to $InUnStall more Distros.$\r$\n$\r$\n${NAME} will keep track of selections you have already $InUnStalled."
+        LangString Finish_Text              ${RODRILANG} "Su selección ha sido procesada en la unidad USB.$\r$\n$\r$\nSiéntase libre de utilizar esta herramienta para añadir o quitar más distros.$\r$\n$\r$\n${NAME} hará un seguimiento de las selecciones procesadas"
         LangString Finish_Link              ${RODRILANG} "Haga clic aquí para visitar la web de ${NAME} para Ayuda!"
         LangString Create_Button            ${RODRILANG} "Crear"
 

@@ -724,7 +724,7 @@ Function SetISOSize ; Get size of ISO
 FunctionEnd
 
   Function .onInstSuccess
-           ExecShell "open" "${RUBIB_WEBSITE}"
+           ExecShell "open" "${AUMBI_FINISH_WEBSITE}"
   FunctionEnd
 
 Function AUMBIInit
