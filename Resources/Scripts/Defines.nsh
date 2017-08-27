@@ -6,7 +6,7 @@
 
            !define NAME                "AUMBI"
            !define FILENAME            "AUMBI"
-           !define DESKTOP_USER        "Rodrigo"
+           !define DESKTOP_USER        "niwra"
            !define VERSION             "2.5.0.${BUILD_NUMBER}"
 
            #INST RESOURCES
